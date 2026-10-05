@@ -1,0 +1,373 @@
+{
+  "version": "crypto-evidence-2.0.0",
+  "created_at_utc": "2026-09-09T21:56:14.838139+00:00",
+  "ranking": [],
+  "ranking_basis": "net target/risk geometry only, not probability or expected profitability; correlated symbols not independent",
+  "reports": [
+    {
+      "version": "crypto-evidence-2.0.0",
+      "symbol": "XAUT_USDT",
+      "as_of_utc": "2026-09-09T21:56:03.902000+00:00",
+      "errors": {},
+      "status": "NO SETUP",
+      "forecasts": [
+        {
+          "horizon_bars": 1,
+          "horizon_minutes": 15,
+          "analog_count": 60,
+          "eligible_count": 1957,
+          "probability_terminal_up": 0.48888888888888893,
+          "baseline_probability_up": 0.4666666666666667,
+          "terminal_price_p10": 4396.213909246104,
+          "terminal_price_p50": 4398.880430173479,
+          "terminal_price_p90": 4401.896331978091,
+          "baseline_price_p10": 4394.65373747309,
+          "baseline_price_p90": 4403.61717483711,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 4398.8,
+          "origin_time_utc": "2026-09-09T21:45:00+00:00",
+          "target_time_utc": "2026-09-09T22:00:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.2551309799382716,
+            "baseline_brier": 0.25384085648148147,
+            "brier_skill": -0.005082410588558073,
+            "terminal_80pct_coverage": 0.7833333333333333,
+            "baseline_80pct_coverage": 0.8166666666666667,
+            "mean_interval_width_pct": 0.2641604976023519,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 92,
+                "forecast_mean": 0.4596316425120773,
+                "observed_up_rate": 0.5108695652173914
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 28,
+                "forecast_mean": 0.5172619047619047,
+                "observed_up_rate": 0.32142857142857145
+              }
+            ],
+            "evaluation_start": 1788882300,
+            "evaluation_end": 1788989400,
+            "verdict": "not beating baseline",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 4,
+          "horizon_minutes": 60,
+          "analog_count": 60,
+          "eligible_count": 489,
+          "probability_terminal_up": 0.5583333333333333,
+          "baseline_probability_up": 0.475,
+          "terminal_price_p10": 4394.217196677489,
+          "terminal_price_p50": 4399.474974680437,
+          "terminal_price_p90": 4408.160179809658,
+          "baseline_price_p10": 4389.815787400084,
+          "baseline_price_p90": 4410.015941469395,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 4398.8,
+          "origin_time_utc": "2026-09-09T21:45:00+00:00",
+          "target_time_utc": "2026-09-09T22:45:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.25561278292181067,
+            "baseline_brier": 0.25068171296296293,
+            "brier_skill": -0.01967064091179349,
+            "terminal_80pct_coverage": 0.7416666666666667,
+            "baseline_80pct_coverage": 0.7416666666666667,
+            "mean_interval_width_pct": 0.34034375432151676,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 59,
+                "forecast_mean": 0.4736346516007533,
+                "observed_up_rate": 0.6101694915254238
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 61,
+                "forecast_mean": 0.5287795992714025,
+                "observed_up_rate": 0.3442622950819672
+              }
+            ],
+            "evaluation_start": 1788556500,
+            "evaluation_end": 1788984900,
+            "verdict": "not beating baseline",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 16,
+          "horizon_minutes": 240,
+          "analog_count": 60,
+          "eligible_count": 122,
+          "probability_terminal_up": 0.4722222222222222,
+          "baseline_probability_up": 0.48333333333333334,
+          "terminal_price_p10": 4379.485180756624,
+          "terminal_price_p50": 4398.6732103744225,
+          "terminal_price_p90": 4413.114588931269,
+          "baseline_price_p10": 4375.180178351382,
+          "baseline_price_p90": 4420.948652253654,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 4398.8,
+          "origin_time_utc": "2026-09-09T21:45:00+00:00",
+          "target_time_utc": "2026-09-10T01:45:00+00:00",
+          "replay": {
+            "n": 90,
+            "brier": 0.26112538346584413,
+            "baseline_brier": 0.2592079972811245,
+            "brier_skill": -0.007397095015707178,
+            "terminal_80pct_coverage": 0.6777777777777778,
+            "baseline_80pct_coverage": 0.6888888888888889,
+            "mean_interval_width_pct": 0.9010286566914305,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 23,
+                "forecast_mean": 0.4866399353889667,
+                "observed_up_rate": 0.6086956521739131
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 64,
+                "forecast_mean": 0.5307277734440653,
+                "observed_up_rate": 0.40625
+              },
+              {
+                "lower": 0.6,
+                "upper": 1,
+                "n": 3,
+                "forecast_mean": 0.6146546106223525,
+                "observed_up_rate": 0
+              }
+            ],
+            "evaluation_start": 1787688900,
+            "evaluation_end": 1788970500,
+            "verdict": "not beating baseline",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        }
+      ],
+      "candidates": [],
+      "experimental": true,
+      "leverage_feasibility": "unknown; requires account liquidation reference",
+      "context": {
+        "15m": {
+          "atr": 6.176150637850465,
+          "ema9": 4397.652031012938,
+          "ema21": 4399.184739957685,
+          "efficiency": 0.06896551724137714,
+          "regime": "range",
+          "range_low": 4389.2,
+          "range_high": 4415.3,
+          "relative_volume": 0.15484226833124257,
+          "rolling_vwap": 4404.035124777167,
+          "close": 4398.8,
+          "vector": [
+            -0.12953051939782842,
+            -0.24816573212352808,
+            0.1379310344827543,
+            -1.8653483038627972,
+            -0.4238177696867751
+          ]
+        },
+        "1h": {
+          "atr": 17.082758163861364,
+          "ema9": 4399.609531158648,
+          "ema21": 4395.616271602103,
+          "efficiency": 0.2171865803413798,
+          "regime": "range",
+          "range_low": 4339.9,
+          "range_high": 4427.8,
+          "relative_volume": 0.2572830713504967,
+          "rolling_vwap": 4395.564437538305,
+          "close": 4399.8,
+          "vector": [
+            0.4320145452631019,
+            0.23375964924638934,
+            0.4343731606827596,
+            -1.3575783552887823,
+            0.12397185574678374
+          ]
+        },
+        "4h": {
+          "atr": 28.782067165241497,
+          "ema9": 4391.623845290045,
+          "ema21": 4398.2138373336065,
+          "efficiency": 0.10410958904109399,
+          "regime": "range",
+          "range_low": 4339.9,
+          "range_high": 4438.3,
+          "relative_volume": 0.6970704684181356,
+          "rolling_vwap": 4396.860265240203,
+          "close": 4393.5,
+          "vector": [
+            -0.2112426451197503,
+            -0.22896173529605585,
+            0.20821917808218798,
+            -0.3608687708670791,
+            -0.05837428599050153
+          ]
+        }
+      },
+      "data_window": {
+        "start_utc": "2026-08-20T02:00:00+00:00",
+        "end_utc": "2026-09-09T21:45:00+00:00",
+        "bars": 1999
+      },
+      "cost_model": {
+        "fee_bps_per_side": 1.0,
+        "fee_source": "public base rate, not verified account tier",
+        "slippage_bps_per_side": 2,
+        "funding_bps_per_trade": 0,
+        "note": "slippage assumption includes spread in historical replay; stress test costs; account fees may differ"
+      },
+      "ticker": {
+        "contractId": 1022,
+        "symbol": "XAUT_USDT",
+        "lastPrice": 4396.4,
+        "bid1": 4396.4,
+        "ask1": 4396.8,
+        "volume24": 96023914,
+        "amount24": 421755247.6985,
+        "holdVol": 74224406,
+        "lower24Price": 4339.9,
+        "high24Price": 4427.8,
+        "riseFallRate": 0.0004,
+        "riseFallValue": 2.1,
+        "indexPrice": 4398.1,
+        "fairPrice": 4396.5,
+        "fundingRate": 1e-05,
+        "maxBidPrice": 4837.9,
+        "minAskPrice": 3958.2,
+        "timestamp": 1788990965828,
+        "riseFallRates": {
+          "zone": "UTC+8",
+          "r": 0.0004,
+          "v": 2.1,
+          "r7": 0.006,
+          "r30": 0.0138,
+          "r90": 0.0773,
+          "r180": -0.1207,
+          "r365": 0.2044
+        },
+        "riseFallRatesOfTimezone": [
+          0.0089,
+          0.0109,
+          0.0004
+        ]
+      },
+      "contract": {
+        "contractSize": 0.001,
+        "priceUnit": 0.1,
+        "volUnit": 1,
+        "minVol": 1,
+        "stopOnlyFair": false,
+        "feeRateMode": "NORMAL"
+      },
+      "funding": {
+        "symbol": "XAUT_USDT",
+        "fundingRate": 1e-05,
+        "maxFundingRate": 0.001,
+        "minFundingRate": -0.001,
+        "collectCycle": 4,
+        "nextSettleTime": 1788998400000,
+        "timestamp": 1788990965333,
+        "idxPrice": 4398.1,
+        "fairPrice": 4396.5
+      },
+      "microstructure": {
+        "depth_samples": 3,
+        "unique_versions": 2,
+        "common_band_pct_min": 0.2934085429650101,
+        "imbalance_mean": -0.3781225856800842,
+        "imbalance_min": -0.3781225856800842,
+        "imbalance_max": -0.3781225856800842,
+        "note": "short REST observation only; varying band coverage; not proof of wall persistence or future flow"
+      },
+      "recent_tape": {
+        "count": 100,
+        "oldest_timestamp": 1788990535152,
+        "latest_timestamp": 1788990962734,
+        "buy_contract_ratio": 0.5318696724988784,
+        "note": "last up-to-100 trades, not a full 15m CVD series"
+      },
+      "setup_replay": [
+        {
+          "family": "breakout",
+          "n": 99,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 1,
+          "mean_net_R_pessimistic": -0.5783629006964585,
+          "mean_net_R_optimistic": -0.5480507788782744,
+          "win_rate_pessimistic": 0.26262626262626265,
+          "profit_factor_pessimistic": 0.30712226179740365,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "pullback",
+          "n": 6,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 0,
+          "mean_net_R_pessimistic": -0.4358986461547333,
+          "mean_net_R_optimistic": -0.4358986461547333,
+          "win_rate_pessimistic": 0.16666666666666666,
+          "profit_factor_pessimistic": 0.3396002159500858,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "failed_breakout",
+          "n": 146,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 4,
+          "mean_net_R_pessimistic": -0.696937541350293,
+          "mean_net_R_optimistic": -0.6452698681365205,
+          "win_rate_pessimistic": 0.3150684931506849,
+          "profit_factor_pessimistic": 0.3322587648792761,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "range_rejection",
+          "n": 59,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 3,
+          "mean_net_R_pessimistic": -1.1692560764042808,
+          "mean_net_R_optimistic": -1.0658608851040836,
+          "win_rate_pessimistic": 0.2033898305084746,
+          "profit_factor_pessimistic": 0.08748496144398733,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        }
+      ],
+      "snapshot_path": "C:\\Users\\intikhab azam\\crypto\\evidence-v2\\snapshots\\XAUT_USDT-20260909T215607-f6083cd7c4.json",
+      "snapshot_sha256": "42925c269551d8095e54f9686afc717d60ad64f76a19bf4cf932428ab2f02e7e",
+      "config": {
+        "feature_window": 20,
+        "atr_period": 14,
+        "analogs": 60,
+        "min_history": 120,
+        "trend_efficiency": 0.35,
+        "range_efficiency": 0.25,
+        "stop_buffer_atr": 0.15,
+        "trend_target_R": 2.0,
+        "horizon_bars": 4
+      },
+      "implementation_sha256": {
+        "crypto_desk.py": "18eb3086e45eb44baf95ae773af7cdd5c86002772bafacd7afd1feda4fd78ccc",
+        "market_engine.py": "5fb40f1a8251a542aa9cc34b11d858a245fd4665f7a528eacd897f11e74ffd8c"
+      }
+    }
+  ]
+}

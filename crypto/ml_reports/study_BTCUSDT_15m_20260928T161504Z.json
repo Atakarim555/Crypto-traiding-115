@@ -1,0 +1,156 @@
+{
+ "symbol": "BTCUSDT",
+ "interval": "15m",
+ "data_span_utc": [
+  "2026-08-07T13:15:00+00:00",
+  "2026-09-28T15:14:59.999000+00:00"
+ ],
+ "crypto_asof": "1790608499999",
+ "fee_per_side": 0.0004,
+ "n_features": 27,
+ "feature_names": [
+  "buy_ratio",
+  "buy_ratio_ma6",
+  "cvd_slope6",
+  "cvd_slope24",
+  "vol_ratio",
+  "realized_vol20",
+  "vol_expansion",
+  "atr_pct",
+  "range_pos",
+  "dist_hh20",
+  "dist_ll20",
+  "body_frac",
+  "upper_wick",
+  "lower_wick",
+  "ret1_z",
+  "ret4_z",
+  "ret16_z",
+  "ret48_z",
+  "lag_d_ema9",
+  "lag_d_ema21",
+  "lag_d_ema50",
+  "lag_ema9_21",
+  "lag_rsi14",
+  "lag_macd_hist",
+  "lag_bb_width",
+  "hour_sin",
+  "hour_cos"
+ ],
+ "n_samples": 4886,
+ "label_counts": [
+  1692,
+  1400,
+  1794
+ ],
+ "ambiguous_dropped": 12,
+ "mean_uniqueness": 0.18049943904958474,
+ "barriers": {
+  "pt_atr": 1.5,
+  "sl_atr": 1.5,
+  "vertical_bars": 8
+ },
+ "xgboost": {
+  "test": {
+   "n": 4886,
+   "accuracy": 0.42959476054031925,
+   "balanced_accuracy": 0.42757175688258015,
+   "macro_f1": 0.4294757209328048,
+   "log_loss": 1.0731035889951173,
+   "brier": 0.6528032964743028,
+   "confusion": [
+    [
+     679,
+     332,
+     681
+    ],
+    [
+     382,
+     573,
+     445
+    ],
+    [
+     635,
+     312,
+     847
+    ]
+   ]
+  },
+  "train_mean": {
+   "accuracy": 0.7610463049236191,
+   "balanced_accuracy": 0.7536320098654854,
+   "macro_f1": 0.755076783279788,
+   "log_loss": 0.7344605624675751,
+   "brier": 0.4188092379237534
+  },
+  "baseline_majority": {
+   "n": 4886,
+   "accuracy": 0.36717151043798607,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17904191616766466,
+   "log_loss": 21.857121697311467,
+   "brier": 1.2656569791240277,
+   "confusion": [
+    [
+     0,
+     0,
+     1692
+    ],
+    [
+     0,
+     0,
+     1400
+    ],
+    [
+     0,
+     0,
+     1794
+    ]
+   ]
+  },
+  "baseline_prior": {
+   "n": 4886,
+   "accuracy": 0.36717151043798607,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17904191616766466,
+   "log_loss": 1.0947120876354561,
+   "brier": 0.6641068290045579,
+   "confusion": [
+    [
+     0,
+     0,
+     1692
+    ],
+    [
+     0,
+     0,
+     1400
+    ],
+    [
+     0,
+     0,
+     1794
+    ]
+   ]
+  },
+  "train_sizes": [
+   4021,
+   4016,
+   4015,
+   4018,
+   4021,
+   4063
+  ],
+  "embargo_bars": 48,
+  "params": {
+   "n_estimators": 300,
+   "learning_rate": 0.05,
+   "max_depth": 4,
+   "min_child_weight": 2.0,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 5.0,
+   "tree_method": "hist"
+  }
+ }
+}

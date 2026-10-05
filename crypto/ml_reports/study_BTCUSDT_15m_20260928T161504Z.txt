@@ -1,0 +1,13 @@
+ml_study  BTCUSDT  15m  CRYPTO_ASOF=1790608499999  fee 0.0004/side
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  data 2026-08-07T13:15:00+00:00 .. 2026-09-28T15:14:59.999000+00:00  (5000 candles)
+  features 27  samples 4886  labels -1/0/+1 [1692, 1400, 1794]  ambiguous dropped 12  mean uniqueness 0.180
+
+  XGBoost  out-of-fold n=4886
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.4296    0.4276    0.4295    1.0731    0.6528
+    model (train)         0.7610    0.7536    0.7551    0.7345    0.4188
+    majority class        0.3672    0.3333    0.1790   21.8571    1.2657
+    class prior           0.3672    0.3333    0.1790    1.0947    0.6641
+    confusion (rows true -1/0/+1, cols predicted): [[679, 332, 681], [382, 573, 445], [635, 312, 847]]

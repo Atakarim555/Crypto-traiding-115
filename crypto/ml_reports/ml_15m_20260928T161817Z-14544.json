@@ -1,0 +1,108 @@
+{
+  "generated_utc": "20260928T161817Z-14544",
+  "args": {
+    "symbols": [
+      "ETHUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0003,
+    "seed": 7,
+    "model": "xgb",
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4892,
+      "label_dist": {
+        "-1": 1570,
+        "0": 1542,
+        "1": 1780
+      },
+      "ambiguous_dropped": 5,
+      "mean_uniqueness": 0.17508446345703116,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.7,
+      "trades": 50,
+      "profit_factor": 1.08133702446308,
+      "win_rate": 0.52,
+      "total_return": 0.007966375109125791,
+      "sharpe": 0.03372560786685622,
+      "deflated_sharpe": 0.2888580540339858,
+      "random_pf": 0.7535519977054109,
+      "random_total_p95": 0.023459051219824792,
+      "buy_hold": 0.39895700918998894,
+      "regime_hot": {
+        "n": 18,
+        "pf": 1.281956985158778,
+        "win_rate": 0.5555555555555556,
+        "avg_pnl": 0.000642274508811038,
+        "total": 0.011560941158598683,
+        "sharpe": 0.11045723449358395
+      },
+      "regime_cold": {
+        "n": 32,
+        "pf": 0.9368713081872079,
+        "win_rate": 0.5,
+        "avg_pnl": -0.00011233018904602797,
+        "total": -0.003594566049472895,
+        "sharpe": -0.02763329942309928
+      },
+      "top_features": [
+        [
+          "hour_cos",
+          0.0618429413686196
+        ],
+        [
+          "vol_ratio",
+          0.05338113817075888
+        ],
+        [
+          "realized_vol20",
+          0.04866622450451056
+        ],
+        [
+          "ret48_z",
+          0.04357128590345383
+        ],
+        [
+          "dist_hh20",
+          0.04345602666338285
+        ],
+        [
+          "atr_pct",
+          0.040472339217861496
+        ],
+        [
+          "hour_sin",
+          0.04008349652091662
+        ],
+        [
+          "vol_expansion",
+          0.03727301210165024
+        ],
+        [
+          "lag_bb_width",
+          0.03715869536002477
+        ],
+        [
+          "lag_macd_hist",
+          0.036930582796533905
+        ]
+      ]
+    }
+  ]
+}

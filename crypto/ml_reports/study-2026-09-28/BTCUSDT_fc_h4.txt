@@ -1,0 +1,73 @@
+Quantile range forecast - calibration + skill vs rolling-vol baseline
+horizon 4 x 15m   micro=False
+
+==============================================================================
+BTCUSDT @ 15m   horizon 4 bars
+==============================================================================
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  samples: 4901   embargo: 49 bars
+
+    forward return  (n=4901)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       2.7%   0.000153      -7.6%     -7.5%   -0.638%
+        0.05       8.0%   0.000402      +5.2%     +2.0%   -0.396%
+        0.10      12.7%   0.000618      +3.6%     +1.5%   -0.300%
+        0.25      27.3%   0.001013      +0.3%     -0.5%   -0.149%
+        0.50      49.8%   0.001237      -0.2%     -0.2%   +0.005%
+        0.75      72.0%   0.001059      +2.7%     +1.0%   +0.151%
+        0.90      85.5%   0.000678      +7.0%     +4.0%   +0.306%
+        0.95      91.4%   0.000446     +11.0%     +6.8%   +0.403%
+        0.99      97.0%   0.000186      +7.0%     -0.8%   +0.594%
+      mean |coverage error| 0.025   skill vs uncond +3.2%   skill vs rolling-vol +0.7%
+
+    down excursion (long risk)  (n=4901)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       3.0%   0.000175      -4.1%     -9.3%   -0.881%
+        0.05       8.1%   0.000415     +12.7%     +2.8%   -0.581%
+        0.10      12.8%   0.000586     +14.4%     +6.0%   -0.469%
+        0.25      26.2%   0.000839     +12.4%     +4.1%   -0.319%
+        0.50      47.7%   0.000841      +8.2%     +1.2%   -0.189%
+        0.75      71.5%   0.000539      +4.6%     +0.5%   -0.092%
+        0.90      85.7%   0.000246      +0.8%     -0.9%   -0.034%
+        0.95      91.5%   0.000127      -0.5%     -0.5%   -0.012%
+        0.99      96.7%   0.000026      -1.7%     -1.7%   -0.000%
+      mean |coverage error| 0.028   skill vs uncond +5.2%   skill vs rolling-vol +0.2%
+      top features: atr_pct(134), vol_expansion(127), cvd_slope24(113), ret48_z(95), lag_macd_hist(95), realized_vol20(91), hour_cos(89), vol_ratio(88)
+
+      liquidation check over 4 bars (4 x 15m):
+        45x (liq 2.22%): breached 0.33% of bars | warned p05 0.00% p01 0.31% | caught 0% / 0% of breaches
+        50x (liq 2.00%): breached 0.33% of bars | warned p05 0.00% p01 1.37% | caught 0% / 0% of breaches
+        60x (liq 1.67%): breached 0.61% of bars | warned p05 0.00% p01 5.12% | caught 0% / 10% of breaches
+
+    up excursion (short risk)  (n=4901)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       3.3%   0.000027      -1.4%     -1.4%   +0.000%
+        0.05       8.8%   0.000134      -1.8%     -2.0%   +0.016%
+        0.10      14.4%   0.000259      -0.5%     -1.7%   +0.037%
+        0.25      29.0%   0.000571      +2.5%     -0.3%   +0.089%
+        0.50      52.0%   0.000886      +8.0%     +3.0%   +0.175%
+        0.75      73.0%   0.000893     +13.2%     +7.3%   +0.304%
+        0.90      86.3%   0.000642     +15.3%    +10.5%   +0.467%
+        0.95      91.4%   0.000461     +16.0%    +10.7%   +0.566%
+        0.99      96.9%   0.000208     +11.6%     -0.1%   +0.796%
+      mean |coverage error| 0.031   skill vs uncond +7.0%   skill vs rolling-vol +2.9%
+
+==============================================================================
+SUMMARY - does the model beat a rolling-vol estimate?
+==============================================================================
+  symbol     target              cal.err    vs uncond  vs roll-vol
+  BTCUSDT    fwd_return            0.025         3.2%         0.7%
+  BTCUSDT    down_excursion        0.028         5.2%         0.2%
+  BTCUSDT    up_excursion          0.031         7.0%         2.9%
+
+  NO target beat a plain rolling-vol estimate on 2+ symbols.
+  The intervals are well CALIBRATED and usable as ranges, but the ML
+  adds nothing over scaling by recent realized vol / ATR. If you want a
+  range, ATR gets you there; skip the model.
+
+  Read the liquidation blocks above separately. Calibration in the BULK of
+  the distribution says nothing about the TAIL, and the tail is the only
+  part that matters at 45-60x.
+
+Saved: C:\Users\intikhab azam\crypto\ml_reports\forecast_15m_h4_20260928T153854Z.json

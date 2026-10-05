@@ -1,0 +1,108 @@
+{
+  "generated_utc": "20260928T161357Z-7540",
+  "args": {
+    "symbols": [
+      "ETHUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0003,
+    "seed": 7,
+    "model": "lgbm",
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4892,
+      "label_dist": {
+        "-1": 1570,
+        "0": 1542,
+        "1": 1780
+      },
+      "ambiguous_dropped": 5,
+      "mean_uniqueness": 0.17508446345703116,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.7,
+      "trades": 73,
+      "profit_factor": 0.8607828465286218,
+      "win_rate": 0.5342465753424658,
+      "total_return": -0.022784333633943457,
+      "sharpe": -0.05997838008089644,
+      "deflated_sharpe": 0.10387011365904153,
+      "random_pf": 0.737080569418843,
+      "random_total_p95": 0.017041797982269385,
+      "buy_hold": 0.39895700918998894,
+      "regime_hot": {
+        "n": 23,
+        "pf": 1.0469717154814437,
+        "win_rate": 0.6086956521739131,
+        "avg_pnl": 0.00013269676494941692,
+        "total": 0.003052025593836589,
+        "sharpe": 0.018803274533942482
+      },
+      "regime_cold": {
+        "n": 50,
+        "pf": 0.738192521245712,
+        "win_rate": 0.5,
+        "avg_pnl": -0.000516727184555601,
+        "total": -0.025836359227780048,
+        "sharpe": -0.12425503897114813
+      },
+      "top_features": [
+        [
+          "vol_expansion",
+          585.8333333333334
+        ],
+        [
+          "realized_vol20",
+          571.8333333333334
+        ],
+        [
+          "ret48_z",
+          545.6666666666666
+        ],
+        [
+          "cvd_slope24",
+          512.0
+        ],
+        [
+          "atr_pct",
+          446.3333333333333
+        ],
+        [
+          "hour_cos",
+          420.0
+        ],
+        [
+          "dist_hh20",
+          381.8333333333333
+        ],
+        [
+          "lag_bb_width",
+          376.0
+        ],
+        [
+          "hour_sin",
+          360.3333333333333
+        ],
+        [
+          "buy_ratio_ma6",
+          354.3333333333333
+        ]
+      ]
+    }
+  ]
+}

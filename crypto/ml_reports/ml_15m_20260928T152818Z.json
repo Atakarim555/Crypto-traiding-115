@@ -1,0 +1,107 @@
+{
+  "generated_utc": "20260928T152818Z",
+  "args": {
+    "symbols": [
+      "SOLUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0002,
+    "seed": 7,
+    "micro": true,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4710,
+      "label_dist": {
+        "-1": 1559,
+        "0": 1456,
+        "1": 1695
+      },
+      "ambiguous_dropped": 11,
+      "mean_uniqueness": 0.17421093871613283,
+      "folds_used": 6,
+      "embargo_bars": 47,
+      "n_trials": 9,
+      "best_threshold": 0.65,
+      "trades": 175,
+      "profit_factor": 0.9473390522175474,
+      "win_rate": 0.5371428571428571,
+      "total_return": -0.02380942064723783,
+      "sharpe": -0.023401647858957014,
+      "deflated_sharpe": 0.18436288568976406,
+      "random_pf": 0.8705043719197053,
+      "random_total_p95": 0.06074489859726701,
+      "buy_hold": 0.6170466595970308,
+      "regime_hot": {
+        "n": 33,
+        "pf": 0.9330388334570903,
+        "win_rate": 0.45454545454545453,
+        "avg_pnl": -0.0002287239867045968,
+        "total": -0.007547891561251695,
+        "sharpe": -0.029909938212547522
+      },
+      "regime_cold": {
+        "n": 142,
+        "pf": 0.9520883069071616,
+        "win_rate": 0.5563380281690141,
+        "avg_pnl": -0.00011451781046469093,
+        "total": -0.01626152908598611,
+        "sharpe": -0.021474630805483046
+      },
+      "top_features": [
+        [
+          "m_tt_pos_ls",
+          569.1666666666666
+        ],
+        [
+          "vol_expansion",
+          405.0
+        ],
+        [
+          "m_tt_acct_ls",
+          401.6666666666667
+        ],
+        [
+          "m_global_ls",
+          361.0
+        ],
+        [
+          "atr_pct",
+          355.5
+        ],
+        [
+          "m_oi_chg24",
+          352.1666666666667
+        ],
+        [
+          "realized_vol20",
+          336.1666666666667
+        ],
+        [
+          "lag_bb_width",
+          323.1666666666667
+        ],
+        [
+          "cvd_slope24",
+          320.1666666666667
+        ],
+        [
+          "ret48_z",
+          318.8333333333333
+        ]
+      ]
+    }
+  ]
+}

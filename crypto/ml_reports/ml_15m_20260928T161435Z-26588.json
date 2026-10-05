@@ -1,0 +1,108 @@
+{
+  "generated_utc": "20260928T161435Z-26588",
+  "args": {
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0004,
+    "seed": 7,
+    "model": "xgb",
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "BTCUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4886,
+      "label_dist": {
+        "-1": 1692,
+        "0": 1400,
+        "1": 1794
+      },
+      "ambiguous_dropped": 12,
+      "mean_uniqueness": 0.18049943904958474,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.35,
+      "trades": 790,
+      "profit_factor": 0.6872115153968744,
+      "win_rate": 0.4620253164556962,
+      "total_return": -0.41350271355375773,
+      "sharpe": -0.15439235969608703,
+      "deflated_sharpe": 5.6867416220462985e-08,
+      "random_pf": 0.5690531451940575,
+      "random_total_p95": -0.23436760817104396,
+      "buy_hold": 0.2830647276497586,
+      "regime_hot": {
+        "n": 172,
+        "pf": 0.690962052841817,
+        "win_rate": 0.45930232558139533,
+        "avg_pnl": -0.0006555124796574933,
+        "total": -0.11274814650108884,
+        "sharpe": -0.15987561948249782
+      },
+      "regime_cold": {
+        "n": 618,
+        "pf": 0.6857819302341627,
+        "win_rate": 0.4627831715210356,
+        "avg_pnl": -0.0004866578754897555,
+        "total": -0.3007545670526689,
+        "sharpe": -0.15364839725685245
+      },
+      "top_features": [
+        [
+          "hour_cos",
+          0.05992050593098005
+        ],
+        [
+          "vol_ratio",
+          0.05690367892384529
+        ],
+        [
+          "hour_sin",
+          0.04716284200549126
+        ],
+        [
+          "atr_pct",
+          0.04569783185919126
+        ],
+        [
+          "realized_vol20",
+          0.04555172969897588
+        ],
+        [
+          "dist_hh20",
+          0.040819184854626656
+        ],
+        [
+          "ret48_z",
+          0.04001654932896296
+        ],
+        [
+          "lag_rsi14",
+          0.03874122413496176
+        ],
+        [
+          "dist_ll20",
+          0.038686402762929596
+        ],
+        [
+          "lag_bb_width",
+          0.03728998079895973
+        ]
+      ]
+    }
+  ]
+}

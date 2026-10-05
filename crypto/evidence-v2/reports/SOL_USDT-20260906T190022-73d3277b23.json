@@ -1,0 +1,33 @@
+{
+  "version": "crypto-evidence-2.0.0",
+  "symbol": "SOL_USDT",
+  "as_of_utc": "2026-09-06T19:00:11.918000+00:00",
+  "errors": {
+    "1h": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "4h": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "15m": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "contract": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "funding": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "depth_0": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "depth_1": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1002)>",
+    "history": "Need at least 180 valid closed 15m candles"
+  },
+  "status": "DATA LIMITED",
+  "forecasts": [],
+  "candidates": [],
+  "experimental": true,
+  "leverage_feasibility": "unknown; requires account liquidation reference",
+  "snapshot_path": "C:\\Users\\intikhab azam\\crypto\\evidence-v2\\snapshots\\SOL_USDT-20260906T190022-1ae77660a9.json",
+  "snapshot_sha256": "9381ca9d39f0efb77d8bff5b45e29bf4e66cb1dd8681766e9f9810d81aabfdda",
+  "config": {
+    "feature_window": 20,
+    "atr_period": 14,
+    "analogs": 60,
+    "min_history": 120,
+    "trend_efficiency": 0.35,
+    "range_efficiency": 0.25,
+    "stop_buffer_atr": 0.15,
+    "trend_target_R": 2.0,
+    "horizon_bars": 4
+  }
+}

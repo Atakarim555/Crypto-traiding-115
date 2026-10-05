@@ -1,0 +1,107 @@
+{
+  "generated_utc": "20260928T152811Z",
+  "args": {
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0004,
+    "seed": 7,
+    "micro": true,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "BTCUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4710,
+      "label_dist": {
+        "-1": 1620,
+        "0": 1360,
+        "1": 1730
+      },
+      "ambiguous_dropped": 12,
+      "mean_uniqueness": 0.18036184878134628,
+      "folds_used": 6,
+      "embargo_bars": 47,
+      "n_trials": 9,
+      "best_threshold": 0.3,
+      "trades": 780,
+      "profit_factor": 0.6133888424567362,
+      "win_rate": 0.4371794871794872,
+      "total_return": -0.538456470085663,
+      "sharpe": -0.2015227066188983,
+      "deflated_sharpe": 8.342215807033426e-13,
+      "random_pf": 0.5765952881804897,
+      "random_total_p95": -0.24651281261429053,
+      "buy_hold": 0.29946027602301045,
+      "regime_hot": {
+        "n": 161,
+        "pf": 0.6046034127713864,
+        "win_rate": 0.45962732919254656,
+        "avg_pnl": -0.0009033115442410953,
+        "total": -0.14543315862281633,
+        "sharpe": -0.21592600569216802
+      },
+      "regime_cold": {
+        "n": 619,
+        "pf": 0.6165416208744297,
+        "win_rate": 0.43134087237479807,
+        "avg_pnl": -0.0006349326517978136,
+        "total": -0.3930233114628466,
+        "sharpe": -0.19836214699222093
+      },
+      "top_features": [
+        [
+          "vol_expansion",
+          457.3333333333333
+        ],
+        [
+          "atr_pct",
+          381.0
+        ],
+        [
+          "m_tt_pos_ls",
+          365.5
+        ],
+        [
+          "m_oi_chg24",
+          360.5
+        ],
+        [
+          "m_tt_acct_ls",
+          347.5
+        ],
+        [
+          "m_global_ls",
+          343.3333333333333
+        ],
+        [
+          "cvd_slope24",
+          326.3333333333333
+        ],
+        [
+          "hour_sin",
+          323.0
+        ],
+        [
+          "hour_cos",
+          317.6666666666667
+        ],
+        [
+          "realized_vol20",
+          314.3333333333333
+        ]
+      ]
+    }
+  ]
+}

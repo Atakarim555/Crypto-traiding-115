@@ -1,0 +1,157 @@
+{
+ "symbol": "SOLUSDT",
+ "interval": "15m",
+ "data_span_utc": [
+  "2026-08-07T13:15:00+00:00",
+  "2026-09-28T15:14:59.999000+00:00"
+ ],
+ "crypto_asof": "1790608499999",
+ "fee_per_side": 0.0002,
+ "n_features": 27,
+ "feature_names": [
+  "buy_ratio",
+  "buy_ratio_ma6",
+  "cvd_slope6",
+  "cvd_slope24",
+  "vol_ratio",
+  "realized_vol20",
+  "vol_expansion",
+  "atr_pct",
+  "range_pos",
+  "dist_hh20",
+  "dist_ll20",
+  "body_frac",
+  "upper_wick",
+  "lower_wick",
+  "ret1_z",
+  "ret4_z",
+  "ret16_z",
+  "ret48_z",
+  "lag_d_ema9",
+  "lag_d_ema21",
+  "lag_d_ema50",
+  "lag_ema9_21",
+  "lag_rsi14",
+  "lag_macd_hist",
+  "lag_bb_width",
+  "hour_sin",
+  "hour_cos"
+ ],
+ "n_samples": 4886,
+ "label_counts": [
+  1620,
+  1501,
+  1765
+ ],
+ "ambiguous_dropped": 11,
+ "mean_uniqueness": 0.17433612344059835,
+ "barriers": {
+  "pt_atr": 1.5,
+  "sl_atr": 1.5,
+  "vertical_bars": 8
+ },
+ "xgboost": {
+  "test": {
+   "n": 4886,
+   "accuracy": 0.36451084731887023,
+   "balanced_accuracy": 0.3605831919574494,
+   "macro_f1": 0.3606921099915846,
+   "log_loss": 1.1256695770434273,
+   "brier": 0.6850347847275315,
+   "confusion": [
+    [
+     494,
+     309,
+     817
+    ],
+    [
+     417,
+     478,
+     606
+    ],
+    [
+     604,
+     352,
+     809
+    ]
+   ]
+  },
+  "train_mean": {
+   "accuracy": 0.7537079737407947,
+   "balanced_accuracy": 0.7504625387170071,
+   "macro_f1": 0.7509634596591224,
+   "log_loss": 0.7654848297437032,
+   "brier": 0.43936567014233346
+  },
+  "baseline_majority": {
+   "n": 4886,
+   "accuracy": 0.36123618501842,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17691575201724052,
+   "log_loss": 22.06212057480889,
+   "brier": 1.27752762996316,
+   "confusion": [
+    [
+     0,
+     0,
+     1620
+    ],
+    [
+     0,
+     0,
+     1501
+    ],
+    [
+     0,
+     0,
+     1765
+    ]
+   ]
+  },
+  "baseline_prior": {
+   "n": 4886,
+   "accuracy": 0.36123618501842,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17691575201724052,
+   "log_loss": 1.0981714215644118,
+   "brier": 0.6663938901613127,
+   "confusion": [
+    [
+     0,
+     0,
+     1620
+    ],
+    [
+     0,
+     0,
+     1501
+    ],
+    [
+     0,
+     0,
+     1765
+    ]
+   ]
+  },
+  "train_sizes": [
+   4018,
+   4021,
+   4016,
+   4019,
+   4016,
+   4069
+  ],
+  "embargo_bars": 48,
+  "params": {
+   "n_estimators": 300,
+   "learning_rate": 0.05,
+   "max_depth": 4,
+   "min_child_weight": 2.0,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 5.0,
+   "tree_method": "hist",
+   "n_jobs": 1
+  }
+ }
+}

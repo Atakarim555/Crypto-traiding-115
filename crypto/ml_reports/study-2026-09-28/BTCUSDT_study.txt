@@ -1,0 +1,54 @@
+ml_study  BTCUSDT  15m  CRYPTO_ASOF=1790608499999  fee 0.0004/side
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  data 2026-08-07T13:15:00+00:00 .. 2026-09-28T15:14:59.999000+00:00  (5000 candles)
+  features 27  samples 4886  labels -1/0/+1 [1692, 1400, 1794]  ambiguous dropped 12  mean uniqueness 0.180
+
+  LightGBM  out-of-fold n=4886
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.4304    0.4278    0.4302    1.0859    0.6604
+    model (train)         0.7704    0.7640    0.7653    0.7117    0.4038
+    majority class        0.3672    0.3333    0.1790   21.8571    1.2657
+    class prior           0.3672    0.3333    0.1790    1.0947    0.6641
+    confusion (rows true -1/0/+1, cols predicted): [[707, 313, 672], [405, 557, 438], [655, 300, 839]]
+C:\Users\intikhab azam\crypto\ml_seq.py:183: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  ep_loss += float(l) * len(sel)
+
+  BiLSTM: 29859 trainable parameters, 244s
+    mean train loss by epoch: 0.1937 0.1816 0.1757 0.1690 0.1604 0.1491 0.1378 0.1263 0.1165 ... 0.1165
+C:\Python37\Lib\site-packages\sklearn\metrics\_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+
+  BiLSTM  out-of-fold n=4863
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3841    0.3833    0.3849    1.5938    0.8727
+    model (train)         0.7517    0.7477    0.7475    0.6172    0.3532
+    majority class        0.3660    0.3333    0.1786   21.8966    1.2679
+    class prior           0.3660    0.3333    0.1786    1.0949    0.6642
+    confusion (rows true -1/0/+1, cols predicted): [[597, 374, 714], [418, 531, 449], [698, 342, 740]]
+
+  LSTM: 14931 trainable parameters, 97s
+    mean train loss by epoch: 0.1943 0.1814 0.1757 0.1677 0.1566 0.1450 0.1327 0.1220 0.1124 ... 0.1124
+C:\Python37\Lib\site-packages\sklearn\metrics\_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+
+  LSTM  out-of-fold n=4863
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3954    0.3918    0.3940    1.5719    0.8521
+    model (train)         0.7720    0.7660    0.7664    0.5809    0.3292
+    majority class        0.3660    0.3333    0.1786   21.8966    1.2679
+    class prior           0.3660    0.3333    0.1786    1.0949    0.6642
+    confusion (rows true -1/0/+1, cols predicted): [[672, 306, 707], [479, 481, 438], [688, 322, 770]]
+
+  detection power (planted leak -> full PnL harness):
+    leak 0.00  DSR 0.075  PF 0.849  random PF 0.595  trades 116  no_edge
+    leak 0.02  DSR 0.010  PF 0.752  random PF 0.584  trades 223  no_edge
+    leak 0.05  DSR 0.041  PF 0.757  random PF 0.595  trades 124  no_edge
+    leak 0.10  DSR 0.002  PF 0.774  random PF 0.571  trades 488  no_edge
+    leak 0.15  DSR 0.071  PF 0.869  random PF 0.591  trades 178  no_edge
+    leak 0.20  DSR 0.178  PF 1.018  random PF 0.584  trades 222  no_edge
+    leak 0.30  DSR 0.974  PF 1.896  random PF 0.568  trades 363  possible_edge_needs_forward_test
+    leak 0.55  DSR 1.000  PF 5.900  random PF 0.569  trades 712  possible_edge_needs_forward_test
+
+Saved: C:\Users\intikhab azam\crypto\ml_reports\study_BTCUSDT_15m_20260928T152549Z.json

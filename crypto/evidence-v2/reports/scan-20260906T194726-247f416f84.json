@@ -1,0 +1,273 @@
+{
+  "version": "crypto-evidence-2.0.0",
+  "created_at_utc": "2026-09-06T19:47:26.367571+00:00",
+  "ranking": [],
+  "ranking_basis": "net target/risk geometry only, not probability or expected profitability; correlated symbols not independent",
+  "reports": [
+    {
+      "version": "crypto-evidence-2.0.0",
+      "symbol": "BTC_USDT",
+      "as_of_utc": "2026-09-06T19:46:10.939000+00:00",
+      "errors": {
+        "contract": "Missing, wrong, or inactive contract",
+        "1h": "<urlopen error timed out>",
+        "funding": "<urlopen error timed out>",
+        "trades": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "depth_0": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "depth_1": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "depth_2": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "ticker": "<urlopen error [Errno 11001] getaddrinfo failed>",
+        "fee": "Missing fee assumption",
+        "ticker_freshness": "Missing or stale source timestamp (10-second budget)",
+        "depth": "No valid depth"
+      },
+      "status": "DATA LIMITED",
+      "forecasts": [
+        {
+          "horizon_bars": 1,
+          "horizon_minutes": 15,
+          "analog_count": 60,
+          "eligible_count": 1957,
+          "probability_terminal_up": 0.4638888888888889,
+          "baseline_probability_up": 0.49166666666666664,
+          "terminal_price_p10": 79704.49874153831,
+          "terminal_price_p50": 79761.2214579336,
+          "terminal_price_p90": 79846.62072146173,
+          "baseline_price_p10": 79687.75094149756,
+          "baseline_price_p90": 79842.56154800116,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 79773.1,
+          "origin_time_utc": "2026-09-06T19:45:00+00:00",
+          "target_time_utc": "2026-09-06T20:00:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.24949762088477367,
+            "baseline_brier": 0.25107118055555555,
+            "brier_skill": 0.0062673846807108635,
+            "terminal_80pct_coverage": 0.7833333333333333,
+            "baseline_80pct_coverage": 0.725,
+            "mean_interval_width_pct": 0.19410610669865738,
+            "calibration_bins": [
+              {
+                "lower": 0,
+                "upper": 0.4,
+                "n": 2,
+                "forecast_mean": 0.38055555555555554,
+                "observed_up_rate": 0
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 68,
+                "forecast_mean": 0.46486928104575165,
+                "observed_up_rate": 0.5
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 50,
+                "forecast_mean": 0.5305,
+                "observed_up_rate": 0.5
+              }
+            ],
+            "evaluation_start": 1788615900,
+            "evaluation_end": 1788723000,
+            "verdict": "descriptive improvement; forward confirmation needed",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 4,
+          "horizon_minutes": 60,
+          "analog_count": 60,
+          "eligible_count": 489,
+          "probability_terminal_up": 0.5083333333333333,
+          "baseline_probability_up": 0.525,
+          "terminal_price_p10": 79653.45549805569,
+          "terminal_price_p50": 79773.2591023501,
+          "terminal_price_p90": 79923.57259634022,
+          "baseline_price_p10": 79639.27958736628,
+          "baseline_price_p90": 79919.28764487115,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 79773.1,
+          "origin_time_utc": "2026-09-06T19:45:00+00:00",
+          "target_time_utc": "2026-09-06T20:45:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.2467085262345679,
+            "baseline_brier": 0.2507378472222222,
+            "brier_skill": 0.01606985555747875,
+            "terminal_80pct_coverage": 0.8416666666666667,
+            "baseline_80pct_coverage": 0.8333333333333334,
+            "mean_interval_width_pct": 0.7585292267995327,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 42,
+                "forecast_mean": 0.4701058201058201,
+                "observed_up_rate": 0.4523809523809524
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 78,
+                "forecast_mean": 0.527457264957265,
+                "observed_up_rate": 0.5641025641025641
+              }
+            ],
+            "evaluation_start": 1788290100,
+            "evaluation_end": 1788718500,
+            "verdict": "descriptive improvement; forward confirmation needed",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 16,
+          "horizon_minutes": 240,
+          "analog_count": 60,
+          "eligible_count": 122,
+          "probability_terminal_up": 0.4555555555555555,
+          "baseline_probability_up": 0.5333333333333333,
+          "terminal_price_p10": 79513.73074244737,
+          "terminal_price_p50": 79745.68421374077,
+          "terminal_price_p90": 80124.53018497229,
+          "baseline_price_p10": 79504.5171883753,
+          "baseline_price_p90": 80202.78683087314,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 79773.1,
+          "origin_time_utc": "2026-09-06T19:45:00+00:00",
+          "target_time_utc": "2026-09-06T23:45:00+00:00",
+          "replay": {
+            "n": 90,
+            "brier": 0.2467080276402842,
+            "baseline_brier": 0.25304753686192266,
+            "brier_skill": 0.025052641492802397,
+            "terminal_80pct_coverage": 0.8111111111111111,
+            "baseline_80pct_coverage": 0.8111111111111111,
+            "mean_interval_width_pct": 2.285169087922684,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 8,
+                "forecast_mean": 0.48048311325649484,
+                "observed_up_rate": 0.375
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 81,
+                "forecast_mean": 0.5551495080508153,
+                "observed_up_rate": 0.5308641975308642
+              },
+              {
+                "lower": 0.6,
+                "upper": 1,
+                "n": 1,
+                "forecast_mean": 0.625,
+                "observed_up_rate": 1
+              }
+            ],
+            "evaluation_start": 1787422500,
+            "evaluation_end": 1788704100,
+            "verdict": "descriptive improvement; forward confirmation needed",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        }
+      ],
+      "candidates": [],
+      "experimental": true,
+      "leverage_feasibility": "unknown; requires account liquidation reference",
+      "context": {
+        "15m": {
+          "atr": 100.5484275085419,
+          "ema9": 79801.6492706236,
+          "ema21": 79769.61637390737,
+          "efficiency": 0.1016931546691721,
+          "regime": "range",
+          "range_low": 79175.1,
+          "range_high": 79940.9,
+          "relative_volume": 0.41079742021533705,
+          "rolling_vwap": 79689.83817443039,
+          "close": 79773.1,
+          "vector": [
+            0.19473203594694072,
+            0.3185817770597524,
+            0.2033863093383442,
+            -0.8896550808516954,
+            0.4140384272172777
+          ]
+        },
+        "4h": {
+          "atr": 700.4300664361292,
+          "ema9": 79784.96081527729,
+          "ema21": 79585.99123659925,
+          "efficiency": 0.21903727138124496,
+          "regime": "range",
+          "range_low": 77056.7,
+          "range_high": 82256.9,
+          "relative_volume": 0.825011316015552,
+          "rolling_vwap": 80160.53967273027,
+          "close": 79677.9,
+          "vector": [
+            0.5871535499504427,
+            0.2840677295456725,
+            0.4380745427624899,
+            -0.1923581763590375,
+            -0.3445309502389051
+          ]
+        }
+      },
+      "data_window": {
+        "start_utc": "2026-08-17T00:00:00+00:00",
+        "end_utc": "2026-09-06T19:45:00+00:00",
+        "bars": 1999
+      },
+      "cost_model": {
+        "fee_bps_per_side": null,
+        "fee_source": "public base rate, not verified account tier",
+        "slippage_bps_per_side": 2,
+        "funding_bps_per_trade": 0,
+        "note": "slippage assumption includes spread in historical replay; stress test costs; account fees may differ"
+      },
+      "ticker": {},
+      "contract": {
+        "contractSize": null,
+        "priceUnit": null,
+        "volUnit": null,
+        "minVol": null,
+        "stopOnlyFair": null,
+        "feeRateMode": null
+      },
+      "funding": null,
+      "snapshot_path": "C:\\Users\\intikhab azam\\crypto\\evidence-v2\\snapshots\\BTC_USDT-20260906T194718-f2a5be5419.json",
+      "snapshot_sha256": "57a055c0d7817d588b224de2d631b10e977dc26f4421c3ee7b62d71c0221a1b9",
+      "config": {
+        "feature_window": 20,
+        "atr_period": 14,
+        "analogs": 60,
+        "min_history": 120,
+        "trend_efficiency": 0.35,
+        "range_efficiency": 0.25,
+        "stop_buffer_atr": 0.15,
+        "trend_target_R": 2.0,
+        "horizon_bars": 4
+      },
+      "implementation_sha256": {
+        "crypto_desk.py": "18eb3086e45eb44baf95ae773af7cdd5c86002772bafacd7afd1feda4fd78ccc",
+        "market_engine.py": "5fb40f1a8251a542aa9cc34b11d858a245fd4665f7a528eacd897f11e74ffd8c"
+      }
+    },
+    {
+      "symbol": "ETH",
+      "status": "DATA LIMITED",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "symbol": "SOL",
+      "status": "DATA LIMITED",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    }
+  ]
+}

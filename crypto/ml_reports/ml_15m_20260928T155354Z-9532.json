@@ -1,0 +1,107 @@
+{
+  "generated_utc": "20260928T155354Z-9532",
+  "args": {
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0004,
+    "seed": 7,
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "BTCUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4886,
+      "label_dist": {
+        "-1": 1692,
+        "0": 1400,
+        "1": 1794
+      },
+      "ambiguous_dropped": 12,
+      "mean_uniqueness": 0.18049943904958474,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.4,
+      "trades": 752,
+      "profit_factor": 0.730358976266912,
+      "win_rate": 0.4747340425531915,
+      "total_return": -0.3278761493662896,
+      "sharpe": -0.1310955482312051,
+      "deflated_sharpe": 2.4477110566745175e-06,
+      "random_pf": 0.5686141969293559,
+      "random_total_p95": -0.22748761322452998,
+      "buy_hold": 0.2830647276497586,
+      "regime_hot": {
+        "n": 167,
+        "pf": 0.8387321461740902,
+        "win_rate": 0.5149700598802395,
+        "avg_pnl": -0.0003011716516517189,
+        "total": -0.050295665825837055,
+        "sharpe": -0.07522910747271172
+      },
+      "regime_cold": {
+        "n": 585,
+        "pf": 0.6929746224589364,
+        "win_rate": 0.46324786324786327,
+        "avg_pnl": -0.00047449655306060266,
+        "total": -0.27758048354045256,
+        "sharpe": -0.1526502208495763
+      },
+      "top_features": [
+        [
+          "vol_expansion",
+          631.5
+        ],
+        [
+          "atr_pct",
+          562.6666666666666
+        ],
+        [
+          "cvd_slope24",
+          553.5
+        ],
+        [
+          "ret48_z",
+          506.6666666666667
+        ],
+        [
+          "realized_vol20",
+          471.6666666666667
+        ],
+        [
+          "hour_cos",
+          433.3333333333333
+        ],
+        [
+          "hour_sin",
+          415.8333333333333
+        ],
+        [
+          "lag_macd_hist",
+          406.0
+        ],
+        [
+          "dist_hh20",
+          350.3333333333333
+        ],
+        [
+          "buy_ratio_ma6",
+          349.6666666666667
+        ]
+      ]
+    }
+  ]
+}

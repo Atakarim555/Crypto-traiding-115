@@ -1,0 +1,50 @@
+ML pipeline - triple-barrier + purged CV + deflated Sharpe
+barriers: +1.50/-1.50 ATR, vertical 8 bars (8 x 15m)  fee 0.030%/side
+
+==========================================================================
+ETHUSDT @ 15m
+==========================================================================
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  candles: 5000
+  samples: 4892  labels: {-1: 1570, 0: 1542, 1: 1780}  ambiguous dropped: 5  mean uniqueness: 0.175
+  purged folds used: 6/6  embargo: 48 bars
+
+  threshold sweep (9 trials, all counted toward DSR):
+      thr  trades      PF    win%     avg%    total%   Sharpe
+     0.30     774    0.66   43.4%  -0.080%   -61.79%   -0.173
+     0.35     749    0.66   45.1%  -0.079%   -59.26%   -0.171
+     0.40     709    0.63   43.9%  -0.089%   -63.39%   -0.192
+     0.45     629    0.62   44.4%  -0.092%   -57.82%   -0.202
+     0.50     512    0.66   44.9%  -0.080%   -40.96%   -0.175
+     0.55     378    0.58   43.1%  -0.100%   -37.77%   -0.222
+     0.60     257    0.56   42.4%  -0.111%   -28.63%   -0.245
+     0.65     140    0.55   43.6%  -0.116%   -16.25%   -0.244
+     0.70      73    0.86   53.4%  -0.031%    -2.28%   -0.060
+
+  BEST (thr=0.70) - but this is 'best of 9 trials', so read the DSR:
+    trades           73
+    profit factor    0.861   (random baseline 0.737)
+    total return     -2.28%  (random p95 +1.70%, buy&hold +39.90%)
+    per-trade Sharpe -0.060
+    DEFLATED SHARPE  0.104   <- P(real edge). Below 0.95 = not evidence.
+
+  regime split (doctrine check):
+    hot  (vol>=1.0x, vol expanding):   23 trades  PF 1.05  total +0.31%
+    cold (chop / low volume):          50 trades  PF 0.74  total -2.58%
+
+  top features: vol_expansion(586), realized_vol20(572), ret48_z(546), cvd_slope24(512), atr_pct(446), hour_cos(420), dist_hh20(382), lag_bb_width(376), hour_sin(360), buy_ratio_ma6(354)
+
+  VERDICT: NO EDGE
+
+==========================================================================
+SUMMARY
+==========================================================================
+  symbol      trades      PF     DSR  verdict
+  ETHUSDT         73    0.86   0.104  no_edge
+
+  NO EDGE FOUND that survives purged CV + trial deflation + fees.
+  This agrees with backtest.py's null on hand-written rules. Klines-derived
+  features do not carry a tradeable 15m signal. Do NOT deploy this.
+
+Saved: C:\Users\intikhab azam\crypto\ml_reports\ml_15m_20260928T152600Z.json

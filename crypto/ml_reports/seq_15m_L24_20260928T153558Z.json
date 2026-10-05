@@ -1,0 +1,62 @@
+{
+  "generated_utc": "20260928T153558Z",
+  "args": {
+    "symbols": [
+      "SOLUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "seq_len": 24,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 5,
+    "embargo": 0.01,
+    "hidden": 48,
+    "layers": 1,
+    "dropout": 0.3,
+    "epochs": 25,
+    "batch": 128,
+    "lr": 0.001,
+    "fee": 0.0002,
+    "seed": 7,
+    "micro": false,
+    "control": false,
+    "only": null
+  },
+  "reports": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "seq_len": 24,
+      "micro": false,
+      "control": false,
+      "n_samples": 4863,
+      "results": {
+        "BiLSTM": {
+          "verdict": "no_edge",
+          "threshold": 0.7,
+          "trades": 494,
+          "profit_factor": 0.9234417749400335,
+          "total_return": -0.09361020552144358,
+          "sharpe": -0.03372037679787649,
+          "deflated_sharpe": 0.09863589765006897,
+          "random_pf": 0.8814415726636612,
+          "folds": 5
+        },
+        "LSTM": {
+          "verdict": "no_edge",
+          "threshold": 0.65,
+          "trades": 557,
+          "profit_factor": 0.7978012940217238,
+          "total_return": -0.3015531618423203,
+          "sharpe": -0.09699605210087515,
+          "deflated_sharpe": 0.0031936532536255835,
+          "random_pf": 0.8767397796189456,
+          "folds": 5
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+ml_study  ETHUSDT  15m  CRYPTO_ASOF=1790608499999  fee 0.0003/side
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  data 2026-08-07T13:15:00+00:00 .. 2026-09-28T15:14:59.999000+00:00  (5000 candles)
+  features 27  samples 4892  labels -1/0/+1 [1570, 1542, 1780]  ambiguous dropped 5  mean uniqueness 0.175
+C:\Python37\Lib\site-packages\sklearn\metrics\_classification.py:304: UserWarning: The y_prob values do not sum to one. Make sure to pass probabilities.
+  warnings.warn(
+
+  XGBoost  out-of-fold n=4892
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3986    0.3961    0.3976    1.1028    0.6726
+    model (train)         0.7594    0.7552    0.7562    0.7463    0.4270
+    majority class        0.3639    0.3333    0.1779   21.9715    1.2723
+    class prior           0.3639    0.3333    0.1779    1.0972    0.6657
+    confusion (rows true -1/0/+1, cols predicted): [[530, 347, 693], [431, 611, 500], [618, 353, 809]]
+
+Saved: C:\Users\intikhab azam\crypto\ml_reports\study_ETHUSDT_15m_20260928T162111Z.json

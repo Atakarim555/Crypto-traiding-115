@@ -1,0 +1,107 @@
+{
+  "generated_utc": "20260928T152607Z",
+  "args": {
+    "symbols": [
+      "SOLUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0002,
+    "seed": 7,
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4886,
+      "label_dist": {
+        "-1": 1620,
+        "0": 1501,
+        "1": 1765
+      },
+      "ambiguous_dropped": 11,
+      "mean_uniqueness": 0.17433612344059835,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.7,
+      "trades": 57,
+      "profit_factor": 1.0100440884575854,
+      "win_rate": 0.45614035087719296,
+      "total_return": 0.001535086143534689,
+      "sharpe": 0.004271278460421831,
+      "deflated_sharpe": 0.2620825257525213,
+      "random_pf": 0.908335242868076,
+      "random_total_p95": 0.052428566330301775,
+      "buy_hold": 0.5857635206786851,
+      "regime_hot": {
+        "n": 17,
+        "pf": 1.293309543203344,
+        "win_rate": 0.5294117647058824,
+        "avg_pnl": 0.0009835394509211807,
+        "total": 0.01672017066566007,
+        "sharpe": 0.11518374436320403
+      },
+      "regime_cold": {
+        "n": 40,
+        "pf": 0.841540745051493,
+        "win_rate": 0.425,
+        "avg_pnl": -0.0003796271130531347,
+        "total": -0.015185084522125388,
+        "sharpe": -0.07360099774957285
+      },
+      "top_features": [
+        [
+          "vol_expansion",
+          628.1666666666666
+        ],
+        [
+          "atr_pct",
+          512.3333333333334
+        ],
+        [
+          "cvd_slope24",
+          497.6666666666667
+        ],
+        [
+          "realized_vol20",
+          495.1666666666667
+        ],
+        [
+          "lag_bb_width",
+          451.6666666666667
+        ],
+        [
+          "ret48_z",
+          448.0
+        ],
+        [
+          "hour_cos",
+          397.5
+        ],
+        [
+          "lag_macd_hist",
+          379.8333333333333
+        ],
+        [
+          "hour_sin",
+          352.8333333333333
+        ],
+        [
+          "dist_hh20",
+          338.8333333333333
+        ]
+      ]
+    }
+  ]
+}

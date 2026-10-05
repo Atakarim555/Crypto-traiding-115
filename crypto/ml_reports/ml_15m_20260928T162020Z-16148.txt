@@ -1,0 +1,48 @@
+ML pipeline - triple-barrier + purged CV + deflated Sharpe   model: xgb
+barriers: +1.50/-1.50 ATR, vertical 8 bars (8 x 15m)  fee 0.040%/side
+
+==========================================================================
+BTCUSDT @ 15m
+==========================================================================
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  candles: 5000
+  samples: 4886  labels: {-1: 1692, 0: 1400, 1: 1794}  ambiguous dropped: 12  mean uniqueness: 0.180
+  purged folds used: 6/6  embargo: 48 bars
+
+  threshold sweep (9 trials, all counted toward DSR):
+      thr  trades      PF    win%     avg%    total%   Sharpe
+     0.30     823    0.66   46.2%  -0.058%   -47.99%   -0.170
+     0.35     784    0.68   45.8%  -0.056%   -43.60%   -0.163
+     0.40     737    0.66   46.0%  -0.059%   -43.21%   -0.173
+     0.45     660    0.64   46.1%  -0.061%   -40.33%   -0.184
+     0.50     564    0.63   46.3%  -0.063%   -35.51%   -0.191
+     0.55     409    0.61   45.2%  -0.067%   -27.38%   -0.203
+     0.60     278    0.71   48.9%  -0.048%   -13.33%   -0.139
+     0.65     169    0.66   50.9%  -0.060%   -10.21%   -0.161
+     0.70      81    0.59   48.1%  -0.078%    -6.31%   -0.213
+
+  BEST (thr=0.60) - but this is 'best of 9 trials', so read the DSR:
+    trades           278
+    profit factor    0.708   (random baseline 0.577)
+    total return     -13.33%  (random p95 -7.89%, buy&hold +28.31%)
+    per-trade Sharpe -0.139
+    DEFLATED SHARPE  0.002   <- P(real edge). Below 0.95 = not evidence.
+
+  regime split (doctrine check):
+    hot  (vol>=1.0x, vol expanding):   69 trades  PF 0.59  total -6.66%
+    cold (chop / low volume):         209 trades  PF 0.77  total -6.67%
+
+  top features: hour_cos(0), vol_ratio(0), hour_sin(0), atr_pct(0), realized_vol20(0), dist_hh20(0), ret48_z(0), lag_rsi14(0), dist_ll20(0), lag_bb_width(0)
+
+  VERDICT: NO EDGE
+
+==========================================================================
+SUMMARY
+==========================================================================
+  symbol      trades      PF     DSR  verdict
+  BTCUSDT        278    0.71   0.002  no_edge
+
+  NO EDGE FOUND that survives purged CV + trial deflation + fees.
+  This agrees with backtest.py's null on hand-written rules. Klines-derived
+  features do not carry a tradeable 15m signal. Do NOT deploy this.

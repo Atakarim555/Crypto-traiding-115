@@ -1,0 +1,107 @@
+{
+  "generated_utc": "20260928T143947Z",
+  "args": {
+    "symbols": [
+      "ETHUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0004,
+    "seed": 7,
+    "micro": true,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4718,
+      "label_dist": {
+        "-1": 1511,
+        "0": 1496,
+        "1": 1711
+      },
+      "ambiguous_dropped": 5,
+      "mean_uniqueness": 0.17480040100013125,
+      "folds_used": 6,
+      "embargo_bars": 47,
+      "n_trials": 9,
+      "best_threshold": 0.65,
+      "trades": 204,
+      "profit_factor": 0.664295494243885,
+      "win_rate": 0.5,
+      "total_return": -0.16236100571635992,
+      "sharpe": -0.16769218501762406,
+      "deflated_sharpe": 0.0008580808954202213,
+      "random_pf": 0.6575498112120873,
+      "random_total_p95": -0.040246382313867145,
+      "buy_hold": 0.40029478245471506,
+      "regime_hot": {
+        "n": 49,
+        "pf": 0.9204836971512788,
+        "win_rate": 0.5918367346938775,
+        "avg_pnl": -0.0002415635337395384,
+        "total": -0.011836613153237382,
+        "sharpe": -0.035172186530005214
+      },
+      "regime_cold": {
+        "n": 155,
+        "pf": 0.5503847982086308,
+        "win_rate": 0.47096774193548385,
+        "avg_pnl": -0.0009711251133104681,
+        "total": -0.15052439256312256,
+        "sharpe": -0.25190519553594454
+      },
+      "top_features": [
+        [
+          "m_tt_pos_ls",
+          471.3333333333333
+        ],
+        [
+          "m_global_ls",
+          399.6666666666667
+        ],
+        [
+          "vol_expansion",
+          394.5
+        ],
+        [
+          "realized_vol20",
+          386.1666666666667
+        ],
+        [
+          "ret48_z",
+          375.6666666666667
+        ],
+        [
+          "m_tt_acct_ls",
+          361.3333333333333
+        ],
+        [
+          "m_oi_chg24",
+          361.0
+        ],
+        [
+          "cvd_slope24",
+          311.8333333333333
+        ],
+        [
+          "m_book_imb_far",
+          304.1666666666667
+        ],
+        [
+          "hour_cos",
+          304.0
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Python 3.11 (tested on 3.11.3). The live desk (crypto_desk.py, gate_scan.py,
+# market_engine.py, trade_math.py) is standard-library only.
+requests==2.33.1        # backtest.py, fetch_micro.py, legacy scripts
+numpy==2.4.4            # ml_*.py
+lightgbm==4.7.0         # ml_pipeline.py, ml_forecast.py
+xgboost==3.2.0          # ml_pipeline.py --model xgb (runs single-threaded for reproducibility)
+scikit-learn==1.9.0     # ml_pipeline.py
+torch==2.14.0           # ml_seq.py (CPU build is enough)

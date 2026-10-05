@@ -1,0 +1,110 @@
+
+BTC_USDT   bars=1999  fee=2.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=18   win%= 22.2  meanR=-0.622 [-1.075,-0.064]  totalR= -11.19  optR=-0.622  amb=1
+  all gates on           2nd half n=41   win%= 39.0  meanR=-0.109 [-0.538,+0.327]  totalR=  -4.47  optR=-0.036  amb=1
+  minus gate2 (reach)    1st half n=20   win%= 40.0  meanR=-0.136 [-0.681,+0.470]  totalR=  -2.73  optR=-0.136  amb=1
+  minus gate2 (reach)    2nd half n=45   win%= 35.6  meanR=-0.205 [-0.601,+0.205]  totalR=  -9.24  optR=-0.139  amb=1
+  minus gate3a (vol)     1st half n=22   win%= 22.7  meanR=-0.554 [-1.001,-0.060]  totalR= -12.18  optR=-0.417  amb=2
+  minus gate3a (vol)     2nd half n=46   win%= 39.1  meanR=-0.111 [-0.515,+0.304]  totalR=  -5.12  optR=-0.046  amb=2
+  minus gate3b (flow)    1st half n=18   win%= 22.2  meanR=-0.623 [-1.076,-0.067]  totalR= -11.21  optR=-0.623  amb=1
+  minus gate3b (flow)    2nd half n=89   win%= 40.4  meanR=-0.055 [-0.355,+0.244]  totalR=  -4.88  optR=-0.021  amb=1
+  gate1 only (base)      1st half n=33   win%= 30.3  meanR=-0.330 [-0.794,+0.121]  totalR= -10.91  optR=-0.240  amb=2
+  gate1 only (base)      2nd half n=133  win%= 33.1  meanR=-0.311 [-0.542,-0.060]  totalR= -41.43  optR=-0.289  amb=2
+  no gates (control)     1st half n=31   win%= 32.3  meanR=-0.424 [-0.837,+0.021]  totalR= -13.15  optR=-0.327  amb=1
+  no gates (control)     2nd half n=156  win%= 31.4  meanR=-0.441 [-0.635,-0.234]  totalR= -68.75  optR=-0.441  amb=1
+
+ETH_USDT   bars=1999  fee=1.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=16   win%= 37.5  meanR=-0.119 [-0.761,+0.549]  totalR=  -1.90  optR=-0.119  amb=0
+  all gates on           2nd half n=48   win%= 27.1  meanR=-0.438 [-0.747,-0.067]  totalR= -21.00  optR=-0.438  amb=0
+  minus gate2 (reach)    1st half n=23   win%= 30.4  meanR=-0.210 [-0.726,+0.337]  totalR=  -4.83  optR=-0.210  amb=0
+  minus gate2 (reach)    2nd half n=56   win%= 28.6  meanR=-0.375 [-0.692,-0.040]  totalR= -21.00  optR=-0.375  amb=0
+  minus gate3a (vol)     1st half n=17   win%= 35.3  meanR=-0.174 [-0.751,+0.422]  totalR=  -2.96  optR=-0.174  amb=0
+  minus gate3a (vol)     2nd half n=57   win%= 29.8  meanR=-0.332 [-0.637,-0.003]  totalR= -18.94  optR=-0.332  amb=0
+  minus gate3b (flow)    1st half n=18   win%= 44.4  meanR=+0.104 [-0.556,+0.724]  totalR=  +1.87  optR=+0.104  amb=0
+  minus gate3b (flow)    2nd half n=92   win%= 28.3  meanR=-0.362 [-0.607,-0.102]  totalR= -33.30  optR=-0.362  amb=0
+  gate1 only (base)      1st half n=31   win%= 32.3  meanR=-0.171 [-0.630,+0.312]  totalR=  -5.29  optR=-0.171  amb=0
+  gate1 only (base)      2nd half n=131  win%= 29.8  meanR=-0.281 [-0.502,-0.057]  totalR= -36.85  optR=-0.281  amb=0
+  no gates (control)     1st half n=33   win%= 33.3  meanR=-0.155 [-0.606,+0.306]  totalR=  -5.10  optR=-0.064  amb=1
+  no gates (control)     2nd half n=155  win%= 32.9  meanR=-0.188 [-0.394,+0.024]  totalR= -29.16  optR=-0.188  amb=1
+
+SOL_USDT   bars=1999  fee=1.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=12   win%= 25.0  meanR=-0.297 [-1.017,+0.463]  totalR=  -3.57  optR=-0.297  amb=0
+  all gates on           2nd half n=56   win%= 33.9  meanR=-0.104 [-0.458,+0.268]  totalR=  -5.83  optR=-0.104  amb=0
+  minus gate2 (reach)    1st half n=17   win%= 35.3  meanR=-0.004 [-0.667,+0.678]  totalR=  -0.07  optR=-0.004  amb=0
+  minus gate2 (reach)    2nd half n=69   win%= 36.2  meanR=-0.027 [-0.348,+0.322]  totalR=  -1.86  optR=-0.027  amb=0
+  minus gate3a (vol)     1st half n=14   win%= 28.6  meanR=-0.322 [-0.877,+0.405]  totalR=  -4.51  optR=-0.322  amb=0
+  minus gate3a (vol)     2nd half n=67   win%= 35.8  meanR=-0.080 [-0.404,+0.263]  totalR=  -5.35  optR=-0.080  amb=0
+  minus gate3b (flow)    1st half n=15   win%= 20.0  meanR=-0.420 [-0.971,+0.202]  totalR=  -6.30  optR=-0.420  amb=0
+  minus gate3b (flow)    2nd half n=106  win%= 31.1  meanR=-0.212 [-0.464,+0.046]  totalR= -22.49  optR=-0.212  amb=0
+  gate1 only (base)      1st half n=25   win%= 32.0  meanR=-0.134 [-0.623,+0.401]  totalR=  -3.36  optR=-0.134  amb=0
+  gate1 only (base)      2nd half n=143  win%= 35.7  meanR=-0.111 [-0.332,+0.103]  totalR= -15.92  optR=-0.111  amb=0
+  no gates (control)     1st half n=32   win%= 43.8  meanR=+0.103 [-0.377,+0.591]  totalR=  +3.30  optR=+0.197  amb=1
+  no gates (control)     2nd half n=147  win%= 34.7  meanR=-0.082 [-0.310,+0.149]  totalR= -12.05  optR=-0.082  amb=1
+
+ADA_USDT   bars=1999  fee=0.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=14   win%= 21.4  meanR=-0.393 [-1.034,+0.252]  totalR=  -5.50  optR=-0.393  amb=0
+  all gates on           2nd half n=54   win%= 44.4  meanR=+0.309 [-0.087,+0.713]  totalR= +16.71  optR=+0.309  amb=0
+  minus gate2 (reach)    1st half n=18   win%= 22.2  meanR=-0.342 [-0.868,+0.294]  totalR=  -6.16  optR=-0.342  amb=0
+  minus gate2 (reach)    2nd half n=61   win%= 42.6  meanR=+0.254 [-0.099,+0.645]  totalR= +15.51  optR=+0.254  amb=0
+  minus gate3a (vol)     1st half n=15   win%= 20.0  meanR=-0.435 [-1.033,+0.168]  totalR=  -6.52  optR=-0.435  amb=0
+  minus gate3a (vol)     2nd half n=82   win%= 43.9  meanR=+0.259 [-0.057,+0.558]  totalR= +21.25  optR=+0.259  amb=0
+  minus gate3b (flow)    1st half n=14   win%= 21.4  meanR=-0.449 [-0.946,+0.136]  totalR=  -6.28  optR=-0.449  amb=0
+  minus gate3b (flow)    2nd half n=94   win%= 38.3  meanR=+0.104 [-0.181,+0.401]  totalR=  +9.73  optR=+0.104  amb=0
+  gate1 only (base)      1st half n=28   win%= 25.0  meanR=-0.253 [-0.713,+0.195]  totalR=  -7.08  optR=-0.253  amb=0
+  gate1 only (base)      2nd half n=134  win%= 37.3  meanR=+0.056 [-0.189,+0.297]  totalR=  +7.54  optR=+0.056  amb=0
+  no gates (control)     1st half n=32   win%= 25.0  meanR=-0.305 [-0.708,+0.162]  totalR=  -9.77  optR=-0.305  amb=0
+  no gates (control)     2nd half n=153  win%= 32.7  meanR=-0.082 [-0.291,+0.142]  totalR= -12.54  optR=-0.082  amb=0
+
+XRP_USDT   bars=1999  fee=0.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=20   win%= 35.0  meanR=-0.193 [-0.691,+0.351]  totalR=  -3.86  optR=+0.107  amb=2
+  all gates on           2nd half n=55   win%= 32.7  meanR=-0.082 [-0.435,+0.274]  totalR=  -4.50  optR=-0.082  amb=2
+  minus gate2 (reach)    1st half n=22   win%= 31.8  meanR=-0.237 [-0.764,+0.309]  totalR=  -5.22  optR=+0.035  amb=2
+  minus gate2 (reach)    2nd half n=61   win%= 36.1  meanR=+0.001 [-0.342,+0.368]  totalR=  +0.09  optR=+0.001  amb=2
+  minus gate3a (vol)     1st half n=20   win%= 35.0  meanR=-0.149 [-0.644,+0.387]  totalR=  -2.97  optR=+0.151  amb=2
+  minus gate3a (vol)     2nd half n=59   win%= 33.9  meanR=-0.028 [-0.376,+0.325]  totalR=  -1.65  optR=-0.028  amb=2
+  minus gate3b (flow)    1st half n=22   win%= 36.4  meanR=-0.133 [-0.659,+0.410]  totalR=  -2.92  optR=+0.140  amb=2
+  minus gate3b (flow)    2nd half n=98   win%= 29.6  meanR=-0.175 [-0.436,+0.113]  totalR= -17.11  optR=-0.175  amb=2
+  gate1 only (base)      1st half n=31   win%= 35.5  meanR=-0.087 [-0.526,+0.384]  totalR=  -2.69  optR=+0.107  amb=2
+  gate1 only (base)      2nd half n=136  win%= 35.3  meanR=+0.001 [-0.229,+0.244]  totalR=  +0.20  optR=+0.001  amb=2
+  no gates (control)     1st half n=31   win%= 19.4  meanR=-0.530 [-0.857,-0.156]  totalR= -16.43  optR=-0.530  amb=0
+  no gates (control)     2nd half n=161  win%= 36.6  meanR=+0.025 [-0.194,+0.254]  totalR=  +4.03  optR=+0.025  amb=0
+
+DOGE_USDT   bars=1999  fee=0.00bp  flow coverage=100.0%
+  variant                period  
+  all gates on           1st half n=14   win%= 35.7  meanR=-0.084 [-0.726,+0.660]  totalR=  -1.17  optR=-0.084  amb=0
+  all gates on           2nd half n=45   win%= 40.0  meanR=+0.160 [-0.242,+0.621]  totalR=  +7.20  optR=+0.160  amb=0
+  minus gate2 (reach)    1st half n=20   win%= 20.0  meanR=-0.586 [-0.970,-0.130]  totalR= -11.71  optR=-0.586  amb=0
+  minus gate2 (reach)    2nd half n=49   win%= 42.9  meanR=+0.222 [-0.170,+0.616]  totalR= +10.90  optR=+0.222  amb=0
+  minus gate3a (vol)     1st half n=16   win%= 31.2  meanR=-0.201 [-0.765,+0.458]  totalR=  -3.21  optR=-0.201  amb=0
+  minus gate3a (vol)     2nd half n=55   win%= 38.2  meanR=+0.080 [-0.298,+0.463]  totalR=  +4.41  optR=+0.080  amb=0
+  minus gate3b (flow)    1st half n=19   win%= 31.6  meanR=-0.150 [-0.715,+0.454]  totalR=  -2.86  optR=-0.150  amb=0
+  minus gate3b (flow)    2nd half n=92   win%= 42.4  meanR=+0.194 [-0.094,+0.478]  totalR= +17.86  optR=+0.194  amb=0
+  gate1 only (base)      1st half n=33   win%= 33.3  meanR=-0.161 [-0.578,+0.307]  totalR=  -5.32  optR=-0.161  amb=0
+  gate1 only (base)      2nd half n=141  win%= 34.8  meanR=-0.027 [-0.252,+0.214]  totalR=  -3.82  optR=-0.027  amb=0
+  no gates (control)     1st half n=33   win%= 33.3  meanR=-0.188 [-0.585,+0.269]  totalR=  -6.21  optR=-0.097  amb=1
+  no gates (control)     2nd half n=152  win%= 40.1  meanR=+0.085 [-0.134,+0.310]  totalR= +12.89  optR=+0.085  amb=1
+
+========================================================================================================
+POOLED ACROSS SYMBOLS  (symbols are correlated - treat pooling as descriptive)
+========================================================================================================
+  all gates on           1st half n=94   win%= 29.8  meanR=-0.289 [-0.541,-0.019]  totalR= -27.18  optR=-0.225  amb=3
+  all gates on           2nd half n=299  win%= 36.1  meanR=-0.040 [-0.201,+0.126]  totalR= -11.90  optR=-0.030  amb=3
+  minus gate2 (reach)    1st half n=120  win%= 30.0  meanR=-0.256 [-0.474,-0.019]  totalR= -30.72  optR=-0.206  amb=3
+  minus gate2 (reach)    2nd half n=341  win%= 37.0  meanR=-0.016 [-0.167,+0.134]  totalR=  -5.61  optR=-0.008  amb=3
+  minus gate3a (vol)     1st half n=104  win%= 28.8  meanR=-0.311 [-0.539,-0.071]  totalR= -32.34  optR=-0.224  amb=4
+  minus gate3a (vol)     2nd half n=366  win%= 37.2  meanR=-0.015 [-0.156,+0.124]  totalR=  -5.39  optR=-0.007  amb=4
+  minus gate3b (flow)    1st half n=106  win%= 30.2  meanR=-0.261 [-0.490,-0.019]  totalR= -27.69  optR=-0.205  amb=3
+  minus gate3b (flow)    2nd half n=571  win%= 34.9  meanR=-0.088 [-0.204,+0.023]  totalR= -50.19  optR=-0.083  amb=3
+  gate1 only (base)      1st half n=181  win%= 31.5  meanR=-0.191 [-0.389,+0.001]  totalR= -34.65  optR=-0.142  amb=4
+  gate1 only (base)      2nd half n=818  win%= 34.4  meanR=-0.110 [-0.203,-0.018]  totalR= -90.27  optR=-0.107  amb=4
+  no gates (control)     1st half n=192  win%= 31.2  meanR=-0.247 [-0.425,-0.070]  totalR= -47.35  optR=-0.184  amb=4
+  no gates (control)     2nd half n=924  win%= 34.7  meanR=-0.114 [-0.206,-0.027]  totalR=-105.58  optR=-0.114  amb=4
+
+~3 weeks of 15m bars is a SMOKE TEST, not evidence of edge. Bootstrap CIs ignore
+clustering by symbol and session, so they understate uncertainty. Do not retune
+thresholds on these numbers.

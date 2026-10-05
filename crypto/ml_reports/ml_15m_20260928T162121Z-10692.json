@@ -1,0 +1,108 @@
+{
+  "generated_utc": "20260928T162121Z-10692",
+  "args": {
+    "symbols": [
+      "SOLUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 6,
+    "embargo": 0.01,
+    "trees": 300,
+    "fee": 0.0002,
+    "seed": 7,
+    "model": "xgb",
+    "micro": false,
+    "workers": 8
+  },
+  "reports": [
+    {
+      "symbol": "SOLUSDT",
+      "interval": "15m",
+      "verdict": "no_edge",
+      "n_samples": 4886,
+      "label_dist": {
+        "-1": 1620,
+        "0": 1501,
+        "1": 1765
+      },
+      "ambiguous_dropped": 11,
+      "mean_uniqueness": 0.17433612344059835,
+      "folds_used": 6,
+      "embargo_bars": 48,
+      "n_trials": 9,
+      "best_threshold": 0.7,
+      "trades": 36,
+      "profit_factor": 1.1518487407717177,
+      "win_rate": 0.5277777777777778,
+      "total_return": 0.013562865844381985,
+      "sharpe": 0.06226913605356051,
+      "deflated_sharpe": 0.38299787386156303,
+      "random_pf": 0.9407342613495832,
+      "random_total_p95": 0.04455363984835484,
+      "buy_hold": 0.5857635206786851,
+      "regime_hot": {
+        "n": 9,
+        "pf": 2.1241049657120468,
+        "win_rate": 0.6666666666666666,
+        "avg_pnl": 0.002482933991464417,
+        "total": 0.022346405923179755,
+        "sharpe": 0.33995815902515175
+      },
+      "regime_cold": {
+        "n": 27,
+        "pf": 0.873507061940853,
+        "win_rate": 0.48148148148148145,
+        "avg_pnl": -0.0003253162992147317,
+        "total": -0.008783540078797756,
+        "sharpe": -0.05860213584095892
+      },
+      "top_features": [
+        [
+          "hour_cos",
+          0.0611488309999307
+        ],
+        [
+          "vol_ratio",
+          0.04944789285461108
+        ],
+        [
+          "atr_pct",
+          0.045800368612011276
+        ],
+        [
+          "realized_vol20",
+          0.042941428100069366
+        ],
+        [
+          "dist_hh20",
+          0.0402496624737978
+        ],
+        [
+          "vol_expansion",
+          0.04017381432155768
+        ],
+        [
+          "dist_ll20",
+          0.04014301300048828
+        ],
+        [
+          "lag_bb_width",
+          0.039982945968707405
+        ],
+        [
+          "lag_ema9_21",
+          0.03950361907482147
+        ],
+        [
+          "hour_sin",
+          0.03899272841711839
+        ]
+      ]
+    }
+  ]
+}

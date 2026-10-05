@@ -1,0 +1,71 @@
+Quantile range forecast - calibration + skill vs rolling-vol baseline
+horizon 16 x 15m   micro=False
+
+==============================================================================
+ETHUSDT @ 15m   horizon 16 bars
+==============================================================================
+  cache: 12002 candles on disk
+  cache saved: 12002 candles total
+  samples: 4889   embargo: 48 bars
+
+    forward return  (n=4889)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       4.0%   0.000462     -42.1%    -19.8%   -1.612%
+        0.05       9.6%   0.001249     -11.1%     -6.4%   -1.000%
+        0.10      13.9%   0.001850      -6.8%     -4.9%   -0.769%
+        0.25      27.0%   0.002854      -2.4%     -3.5%   -0.323%
+        0.50      49.1%   0.003524      -4.2%     -4.0%   +0.043%
+        0.75      70.2%   0.003133      -3.1%     -2.9%   +0.417%
+        0.90      83.5%   0.002146      -2.3%     -3.2%   +0.777%
+        0.95      89.3%   0.001561      -3.0%     -7.4%   +1.014%
+        0.99      96.1%   0.000795     -20.9%    -32.5%   +1.615%
+      mean |coverage error| 0.038   skill vs uncond -10.7%   skill vs rolling-vol -9.4%
+
+    down excursion (long risk)  (n=4889)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       4.3%   0.000543     -48.6%    -26.8%   -2.360%
+        0.05       9.6%   0.001344     -13.6%     -5.5%   -1.582%
+        0.10      14.0%   0.001791      -3.6%     +1.1%   -1.289%
+        0.25      26.4%   0.002295      +7.0%     +6.5%   -0.843%
+        0.50      46.5%   0.002285      +4.6%     +0.2%   -0.509%
+        0.75      67.4%   0.001479      -1.3%     -4.6%   -0.265%
+        0.90      84.4%   0.000660      -2.2%     -3.6%   -0.122%
+        0.95      90.7%   0.000343      -3.0%     -3.7%   -0.064%
+        0.99      97.4%   0.000069      -1.9%     -1.9%   -0.010%
+      mean |coverage error| 0.040   skill vs uncond -7.0%   skill vs rolling-vol -4.3%
+      top features: vol_expansion(162), atr_pct(147), ret48_z(147), cvd_slope24(142), realized_vol20(139), hour_cos(115), lag_macd_hist(90), lag_bb_width(87)
+
+      liquidation check over 16 bars (16 x 15m):
+        45x (liq 2.22%): breached 4.36% of bars | warned p05 13.77% p01 61.93% | caught 15% / 65% of breaches
+        50x (liq 2.00%): breached 5.56% of bars | warned p05 23.17% p01 79.01% | caught 26% / 78% of breaches
+        60x (liq 1.67%): breached 8.37% of bars | warned p05 43.85% p01 96.38% | caught 51% / 94% of breaches
+
+    up excursion (short risk)  (n=4889)
+           q   coverage    pinball  vs uncond    vs vol median fc
+        0.01       2.6%   0.000082      -2.9%     -2.9%   +0.015%
+        0.05       9.4%   0.000405      -3.1%     -3.4%   +0.081%
+        0.10      15.9%   0.000781      -2.5%     -2.2%   +0.139%
+        0.25      30.8%   0.001757      -1.1%     +0.6%   +0.287%
+        0.50      51.3%   0.002841      +0.7%     +3.8%   +0.557%
+        0.75      70.3%   0.002984      +2.6%     +4.5%   +0.883%
+        0.90      82.3%   0.002354      +0.8%     -0.3%   +1.234%
+        0.95      89.2%   0.001793      +0.4%     -5.9%   +1.533%
+        0.99      96.4%   0.000965     -14.4%    -36.1%   +2.315%
+      mean |coverage error| 0.044   skill vs uncond -2.2%   skill vs rolling-vol -4.7%
+
+==============================================================================
+SUMMARY - does the model beat a rolling-vol estimate?
+==============================================================================
+  symbol     target              cal.err    vs uncond  vs roll-vol
+  ETHUSDT    fwd_return            0.038       -10.7%        -9.4%
+  ETHUSDT    down_excursion        0.040        -7.0%        -4.3%
+  ETHUSDT    up_excursion          0.044        -2.2%        -4.7%
+
+  NO target beat a plain rolling-vol estimate on 2+ symbols.
+  The intervals are well CALIBRATED and usable as ranges, but the ML
+  adds nothing over scaling by recent realized vol / ATR. If you want a
+  range, ATR gets you there; skip the model.
+
+  Read the liquidation blocks above separately. Calibration in the BULK of
+  the distribution says nothing about the TAIL, and the tail is the only
+  part that matters at 45-60x.

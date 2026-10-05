@@ -1,0 +1,380 @@
+{
+  "version": "crypto-evidence-2.0.0",
+  "created_at_utc": "2026-09-28T14:33:48.964409+00:00",
+  "ranking": [],
+  "ranking_basis": "net target/risk geometry only, not probability or expected profitability; correlated symbols not independent",
+  "reports": [
+    {
+      "version": "crypto-evidence-2.0.0",
+      "symbol": "ETH_USDT",
+      "as_of_utc": "2026-09-28T14:33:40.580000+00:00",
+      "errors": {},
+      "status": "NO SETUP",
+      "forecasts": [
+        {
+          "horizon_bars": 1,
+          "horizon_minutes": 15,
+          "analog_count": 60,
+          "eligible_count": 1957,
+          "probability_terminal_up": 0.5694444444444444,
+          "baseline_probability_up": 0.5083333333333333,
+          "terminal_price_p10": 2664.409076071898,
+          "terminal_price_p50": 2671.6109870343926,
+          "terminal_price_p90": 2678.849274665449,
+          "baseline_price_p10": 2659.5471693352906,
+          "baseline_price_p90": 2680.0788811304833,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 2670.6,
+          "origin_time_utc": "2026-09-28T14:30:00+00:00",
+          "target_time_utc": "2026-09-28T14:45:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.25023167438271604,
+            "baseline_brier": 0.2517008101851852,
+            "brier_skill": 0.005836833824206855,
+            "terminal_80pct_coverage": 0.6916666666666667,
+            "baseline_80pct_coverage": 0.825,
+            "mean_interval_width_pct": 0.4150454305410489,
+            "calibration_bins": [
+              {
+                "lower": 0,
+                "upper": 0.4,
+                "n": 1,
+                "forecast_mean": 0.39166666666666666,
+                "observed_up_rate": 0
+              },
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 47,
+                "forecast_mean": 0.4629432624113475,
+                "observed_up_rate": 0.44680851063829785
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 65,
+                "forecast_mean": 0.5371794871794872,
+                "observed_up_rate": 0.5846153846153846
+              },
+              {
+                "lower": 0.6,
+                "upper": 1,
+                "n": 7,
+                "forecast_mean": 0.625,
+                "observed_up_rate": 0.2857142857142857
+              }
+            ],
+            "evaluation_start": 1790497800,
+            "evaluation_end": 1790604900,
+            "verdict": "descriptive improvement; forward confirmation needed",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 4,
+          "horizon_minutes": 60,
+          "analog_count": 60,
+          "eligible_count": 489,
+          "probability_terminal_up": 0.49444444444444446,
+          "baseline_probability_up": 0.48333333333333334,
+          "terminal_price_p10": 2654.7975625203526,
+          "terminal_price_p50": 2670.484907300385,
+          "terminal_price_p90": 2686.347402015426,
+          "baseline_price_p10": 2655.9426668169244,
+          "baseline_price_p90": 2687.6827288184686,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 2670.6,
+          "origin_time_utc": "2026-09-28T14:30:00+00:00",
+          "target_time_utc": "2026-09-28T15:30:00+00:00",
+          "replay": {
+            "n": 120,
+            "brier": 0.2575991512345679,
+            "baseline_brier": 0.25121643518518516,
+            "brier_skill": -0.025407239158846018,
+            "terminal_80pct_coverage": 0.7166666666666667,
+            "baseline_80pct_coverage": 0.7083333333333334,
+            "mean_interval_width_pct": 0.7881926876165252,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 62,
+                "forecast_mean": 0.4651433691756272,
+                "observed_up_rate": 0.5483870967741935
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 58,
+                "forecast_mean": 0.5298850574712644,
+                "observed_up_rate": 0.41379310344827586
+              }
+            ],
+            "evaluation_start": 1790172000,
+            "evaluation_end": 1790600400,
+            "verdict": "not beating baseline",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        },
+        {
+          "horizon_bars": 16,
+          "horizon_minutes": 240,
+          "analog_count": 60,
+          "eligible_count": 122,
+          "probability_terminal_up": 0.4638888888888889,
+          "baseline_probability_up": 0.525,
+          "terminal_price_p10": 2628.3133314647625,
+          "terminal_price_p50": 2665.6491162496527,
+          "terminal_price_p90": 2708.171569674724,
+          "baseline_price_p10": 2639.7851979637876,
+          "baseline_price_p90": 2711.3587559112157,
+          "interpretation": "empirical model estimate; calibration must be checked; interval is terminal price, not path containment",
+          "origin_price": 2670.6,
+          "origin_time_utc": "2026-09-28T14:30:00+00:00",
+          "target_time_utc": "2026-09-28T18:30:00+00:00",
+          "replay": {
+            "n": 90,
+            "brier": 0.2545038119025381,
+            "baseline_brier": 0.25324971649140954,
+            "brier_skill": -0.004952011115760158,
+            "terminal_80pct_coverage": 0.8,
+            "baseline_80pct_coverage": 0.8,
+            "mean_interval_width_pct": 2.210581171842888,
+            "calibration_bins": [
+              {
+                "lower": 0.4,
+                "upper": 0.5,
+                "n": 18,
+                "forecast_mean": 0.4822297148287581,
+                "observed_up_rate": 0.6111111111111112
+              },
+              {
+                "lower": 0.5,
+                "upper": 0.6,
+                "n": 72,
+                "forecast_mean": 0.5243184255307909,
+                "observed_up_rate": 0.5138888888888888
+              }
+            ],
+            "evaluation_start": 1789304400,
+            "evaluation_end": 1790586000,
+            "verdict": "not beating baseline",
+            "limitation": "nonoverlapping outcomes still share history and regimes; this is not an independent significance test"
+          }
+        }
+      ],
+      "candidates": [],
+      "experimental": true,
+      "leverage_feasibility": "unknown; requires account liquidation reference",
+      "context": {
+        "15m": {
+          "atr": 11.524338789998108,
+          "ema9": 2680.1905916902083,
+          "ema21": 2672.1863146477485,
+          "efficiency": 0.20098664625329424,
+          "regime": "range",
+          "range_low": 2637.08,
+          "range_high": 2698.21,
+          "relative_volume": 2.014862704895444,
+          "rolling_vwap": 2672.8492671919353,
+          "close": 2670.6,
+          "vector": [
+            0.41008860344349507,
+            0.6945541248237701,
+            0.4019732925065885,
+            0.700551056548932,
+            -0.09758768953787973
+          ]
+        },
+        "1h": {
+          "atr": 16.612934890235,
+          "ema9": 2667.95032140179,
+          "ema21": 2669.6295419259795,
+          "efficiency": 0.0023337921129787235,
+          "regime": "range",
+          "range_low": 2634.0,
+          "range_high": 2702.52,
+          "relative_volume": 1.8137006731538556,
+          "rolling_vwap": 2665.271573345455,
+          "close": 2689.61,
+          "vector": [
+            -0.004695136682069496,
+            -0.10107910103088222,
+            0.004667584225957447,
+            0.5953693287906758,
+            0.7325143574977517
+          ]
+        },
+        "4h": {
+          "atr": 31.30948446138692,
+          "ema9": 2674.912957119807,
+          "ema21": 2683.001514847317,
+          "efficiency": 0.03968575362436137,
+          "regime": "range",
+          "range_low": 2634.0,
+          "range_high": 2742.53,
+          "relative_volume": 1.3328064872502192,
+          "rolling_vwap": 2687.0735024304195,
+          "close": 2667.86,
+          "vector": [
+            -0.06260083912966234,
+            -0.2583420923933031,
+            0.07937150724872274,
+            0.2872868598032138,
+            -0.3068319833581865
+          ]
+        }
+      },
+      "data_window": {
+        "start_utc": "2026-09-07T18:45:00+00:00",
+        "end_utc": "2026-09-28T14:30:00+00:00",
+        "bars": 1999
+      },
+      "cost_model": {
+        "fee_bps_per_side": 1.0,
+        "fee_source": "public base rate, not verified account tier",
+        "slippage_bps_per_side": 2,
+        "funding_bps_per_trade": 0,
+        "note": "slippage assumption includes spread in historical replay; stress test costs; account fees may differ"
+      },
+      "ticker": {
+        "contractId": 11,
+        "symbol": "ETH_USDT",
+        "lastPrice": 2672.57,
+        "bid1": 2672.57,
+        "ask1": 2672.58,
+        "volume24": 60442434,
+        "amount24": 1613809562.1465,
+        "holdVol": 83694372,
+        "lower24Price": 2634,
+        "high24Price": 2709.15,
+        "riseFallRate": -0.006,
+        "riseFallValue": -16.27,
+        "indexPrice": 2674.05,
+        "fairPrice": 2672.8,
+        "fundingRate": 4.2e-05,
+        "maxBidPrice": 3208.86,
+        "minAskPrice": 2139.24,
+        "timestamp": 1790606024694,
+        "riseFallRates": {
+          "zone": "UTC+8",
+          "r": -0.006,
+          "v": -16.27,
+          "r7": 0.0233,
+          "r30": 0.0818,
+          "r90": 0.692,
+          "r180": 0.3012,
+          "r365": -0.3347
+        },
+        "riseFallRatesOfTimezone": [
+          -0.0132,
+          -0.0055,
+          -0.006
+        ]
+      },
+      "contract": {
+        "contractSize": 0.01,
+        "priceUnit": 0.01,
+        "volUnit": 1,
+        "minVol": 1,
+        "stopOnlyFair": false,
+        "feeRateMode": "NORMAL"
+      },
+      "funding": {
+        "symbol": "ETH_USDT",
+        "fundingRate": 4.2e-05,
+        "maxFundingRate": 0.0018,
+        "minFundingRate": -0.0018,
+        "collectCycle": 8,
+        "nextSettleTime": 1790611200000,
+        "timestamp": 1790606021863,
+        "idxPrice": 2675.45,
+        "fairPrice": 2674.08
+      },
+      "microstructure": {
+        "depth_samples": 3,
+        "unique_versions": 3,
+        "common_band_pct_min": 0.12394585267454211,
+        "imbalance_mean": -0.06366256700427207,
+        "imbalance_min": -0.10212332653372011,
+        "imbalance_max": -0.011087761769772997,
+        "note": "short REST observation only; varying band coverage; not proof of wall persistence or future flow"
+      },
+      "recent_tape": {
+        "count": 100,
+        "oldest_timestamp": 1790606001692,
+        "latest_timestamp": 1790606021535,
+        "buy_contract_ratio": 0.6751242642929933,
+        "note": "last up-to-100 trades, not a full 15m CVD series"
+      },
+      "setup_replay": [
+        {
+          "family": "breakout",
+          "n": 106,
+          "pending": 1,
+          "cancelled_gap": 0,
+          "ambiguous": 0,
+          "mean_net_R_pessimistic": -0.3312868837241861,
+          "mean_net_R_optimistic": -0.3312868837241861,
+          "win_rate_pessimistic": 0.3018867924528302,
+          "profit_factor_pessimistic": 0.4249618527068446,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "pullback",
+          "n": 7,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 0,
+          "mean_net_R_pessimistic": 0.19688480489779817,
+          "mean_net_R_optimistic": 0.19688480489779817,
+          "win_rate_pessimistic": 0.7142857142857143,
+          "profit_factor_pessimistic": 2.0527142245053405,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "failed_breakout",
+          "n": 179,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 0,
+          "mean_net_R_pessimistic": -0.38178512993537833,
+          "mean_net_R_optimistic": -0.38178512993537833,
+          "win_rate_pessimistic": 0.3687150837988827,
+          "profit_factor_pessimistic": 0.4679502641000364,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        },
+        {
+          "family": "range_rejection",
+          "n": 41,
+          "pending": 0,
+          "cancelled_gap": 0,
+          "ambiguous": 1,
+          "mean_net_R_pessimistic": -0.5530727468634754,
+          "mean_net_R_optimistic": -0.5257552495582346,
+          "win_rate_pessimistic": 0.3170731707317073,
+          "profit_factor_pessimistic": 0.17785092014327525,
+          "limitations": "experimental rules; one position per family, not portfolio; OHLC last-price simulation; fixed assumed costs; no live edge claim"
+        }
+      ],
+      "snapshot_path": "C:\\Users\\intikhab azam\\crypto\\evidence-v2\\snapshots\\ETH_USDT-20260928T143346-3a6ef53f6d.json",
+      "snapshot_sha256": "c28750cee82a7ff3dcfcf7cf2d12bce6e562b66b2685a478181ef1231fa08685",
+      "config": {
+        "feature_window": 20,
+        "atr_period": 14,
+        "analogs": 60,
+        "min_history": 120,
+        "trend_efficiency": 0.35,
+        "range_efficiency": 0.25,
+        "stop_buffer_atr": 0.15,
+        "trend_target_R": 2.0,
+        "horizon_bars": 4
+      },
+      "implementation_sha256": {
+        "crypto_desk.py": "18eb3086e45eb44baf95ae773af7cdd5c86002772bafacd7afd1feda4fd78ccc",
+        "market_engine.py": "5fb40f1a8251a542aa9cc34b11d858a245fd4665f7a528eacd897f11e74ffd8c"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+BiLSTM/LSTM under the same harness as ml_pipeline.py
+seq_len 24 | purge widened by seq_len on the left | scaler fit on train folds only
+
+==============================================================================
+ETHUSDT @ 15m   seq_len=24
+==============================================================================
+  cache: 12002 candles on disk
+  cache saved: 12002 candles total
+  samples: 4869  windows (4869, 24, 27)  labels: {-1: 1564, 0: 1539, 1: 1766}  mean uniqueness: 0.175
+
+  BiLSTM  (5 folds, 209s)
+      thr  trades      PF    win%    total%   Sharpe
+     0.30     753    0.69   47.1%   -53.40%   -0.155
+     0.35     735    0.67   47.1%   -55.04%   -0.165
+     0.40     714    0.67   47.1%   -54.53%   -0.169
+     0.45     697    0.70   48.2%   -47.64%   -0.151
+     0.50     672    0.65   47.3%   -53.69%   -0.178
+     0.55     645    0.64   46.5%   -53.52%   -0.185
+     0.60     620    0.64   46.5%   -51.98%   -0.187
+     0.65     582    0.62   46.0%   -51.21%   -0.198
+     0.70     539    0.63   47.5%   -45.18%   -0.189
+    BEST thr=0.45  trades 697  PF 0.696 (random 0.660)  total -47.64%
+    per-trade Sharpe -0.151   DEFLATED SHARPE 0.000
+    VERDICT: NO EDGE
+
+  LSTM  (5 folds, 72s)
+      thr  trades      PF    win%    total%   Sharpe
+     0.30     751    0.73   48.9%   -45.05%   -0.130
+     0.35     737    0.76   49.8%   -38.65%   -0.113
+     0.40     715    0.74   48.4%   -41.91%   -0.128
+     0.45     691    0.74   48.6%   -40.36%   -0.128
+     0.50     664    0.75   48.8%   -36.38%   -0.120
+     0.55     643    0.72   47.6%   -39.83%   -0.136
+     0.60     620    0.70   47.3%   -42.96%   -0.153
+     0.65     580    0.68   47.4%   -41.91%   -0.160
+     0.70     545    0.67   47.7%   -40.79%   -0.170
+    BEST thr=0.35  trades 737  PF 0.760 (random 0.658)  total -38.65%
+    per-trade Sharpe -0.113   DEFLATED SHARPE 0.000
+    VERDICT: NO EDGE
+
+==============================================================================
+SUMMARY
+==============================================================================
+  symbol     model     trades      PF     DSR  verdict
+  ETHUSDT    BiLSTM       697    0.70   0.000  no_edge
+  ETHUSDT    LSTM         737    0.76   0.000  no_edge
+
+  NO EDGE from either recurrent model. Matches LightGBM's null.
+  The constraint is signal-to-noise and fees, not model capacity.

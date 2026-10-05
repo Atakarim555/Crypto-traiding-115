@@ -1,0 +1,51 @@
+ML pipeline - triple-barrier + purged CV + deflated Sharpe
+barriers: +1.50/-1.50 ATR, vertical 8 bars (8 x 15m)  fee 0.040%/side
+
+==========================================================================
+BTCUSDT @ 15m
+==========================================================================
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  candles: 5000
+  micro: 53 days needed, 31 already cached
+  micro: 14688 5m buckets in 97.5s
+  micro features: 11 cols, book coverage 96.9% of bars
+  samples: 4710  labels: {-1: 1620, 0: 1360, 1: 1730}  ambiguous dropped: 12  mean uniqueness: 0.180
+  purged folds used: 6/6  embargo: 47 bars
+
+  threshold sweep (9 trials, all counted toward DSR):
+      thr  trades      PF    win%     avg%    total%   Sharpe
+     0.30     780    0.61   43.7%  -0.069%   -53.85%   -0.202
+     0.35     753    0.59   43.6%  -0.075%   -56.17%   -0.218
+     0.40     720    0.56   42.1%  -0.083%   -59.48%   -0.243
+     0.45     664    0.57   43.8%  -0.077%   -51.15%   -0.232
+     0.50     555    0.57   43.1%  -0.077%   -42.55%   -0.234
+     0.55     431    0.50   39.7%  -0.092%   -39.53%   -0.283
+     0.60     313    0.50   41.5%  -0.093%   -29.15%   -0.282
+     0.65     194    0.47   43.3%  -0.097%   -18.86%   -0.303
+     0.70     109    0.51   44.0%  -0.080%    -8.77%   -0.275
+
+  BEST (thr=0.30) - but this is 'best of 9 trials', so read the DSR:
+    trades           780
+    profit factor    0.613   (random baseline 0.577)
+    total return     -53.85%  (random p95 -24.65%, buy&hold +29.95%)
+    per-trade Sharpe -0.202
+    DEFLATED SHARPE  0.000   <- P(real edge). Below 0.95 = not evidence.
+
+  regime split (doctrine check):
+    hot  (vol>=1.0x, vol expanding):  161 trades  PF 0.60  total -14.54%
+    cold (chop / low volume):         619 trades  PF 0.62  total -39.30%
+
+  top features: vol_expansion(457), atr_pct(381), m_tt_pos_ls(366), m_oi_chg24(360), m_tt_acct_ls(348), m_global_ls(343), cvd_slope24(326), hour_sin(323), hour_cos(318), realized_vol20(314)
+
+  VERDICT: NO EDGE
+
+==========================================================================
+SUMMARY
+==========================================================================
+  symbol      trades      PF     DSR  verdict
+  BTCUSDT        780    0.61   0.000  no_edge
+
+  NO EDGE FOUND that survives purged CV + trial deflation + fees.
+  This agrees with backtest.py's null on hand-written rules. Klines-derived
+  features do not carry a tradeable 15m signal. Do NOT deploy this.

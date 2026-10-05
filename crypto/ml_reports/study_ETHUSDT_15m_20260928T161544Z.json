@@ -1,0 +1,156 @@
+{
+ "symbol": "ETHUSDT",
+ "interval": "15m",
+ "data_span_utc": [
+  "2026-08-07T13:15:00+00:00",
+  "2026-09-28T15:14:59.999000+00:00"
+ ],
+ "crypto_asof": "1790608499999",
+ "fee_per_side": 0.0003,
+ "n_features": 27,
+ "feature_names": [
+  "buy_ratio",
+  "buy_ratio_ma6",
+  "cvd_slope6",
+  "cvd_slope24",
+  "vol_ratio",
+  "realized_vol20",
+  "vol_expansion",
+  "atr_pct",
+  "range_pos",
+  "dist_hh20",
+  "dist_ll20",
+  "body_frac",
+  "upper_wick",
+  "lower_wick",
+  "ret1_z",
+  "ret4_z",
+  "ret16_z",
+  "ret48_z",
+  "lag_d_ema9",
+  "lag_d_ema21",
+  "lag_d_ema50",
+  "lag_ema9_21",
+  "lag_rsi14",
+  "lag_macd_hist",
+  "lag_bb_width",
+  "hour_sin",
+  "hour_cos"
+ ],
+ "n_samples": 4892,
+ "label_counts": [
+  1570,
+  1542,
+  1780
+ ],
+ "ambiguous_dropped": 5,
+ "mean_uniqueness": 0.17508446345703116,
+ "barriers": {
+  "pt_atr": 1.5,
+  "sl_atr": 1.5,
+  "vertical_bars": 8
+ },
+ "xgboost": {
+  "test": {
+   "n": 4892,
+   "accuracy": 0.39881439084219134,
+   "balanced_accuracy": 0.3960583376333624,
+   "macro_f1": 0.3974945961508112,
+   "log_loss": 1.1041136853399474,
+   "brier": 0.6731274131763404,
+   "confusion": [
+    [
+     523,
+     344,
+     703
+    ],
+    [
+     428,
+     609,
+     505
+    ],
+    [
+     614,
+     347,
+     819
+    ]
+   ]
+  },
+  "train_mean": {
+   "accuracy": 0.7610477687282717,
+   "balanced_accuracy": 0.7568787110881581,
+   "macro_f1": 0.7578683018292681,
+   "log_loss": 0.7466929455598196,
+   "brier": 0.427213633850913
+  },
+  "baseline_majority": {
+   "n": 4892,
+   "accuracy": 0.36385936222403925,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17785771382893686,
+   "log_loss": 21.97151924385978,
+   "brier": 1.2722812755519215,
+   "confusion": [
+    [
+     0,
+     0,
+     1570
+    ],
+    [
+     0,
+     0,
+     1542
+    ],
+    [
+     0,
+     0,
+     1780
+    ]
+   ]
+  },
+  "baseline_prior": {
+   "n": 4892,
+   "accuracy": 0.36385936222403925,
+   "balanced_accuracy": 0.3333333333333333,
+   "macro_f1": 0.17785771382893686,
+   "log_loss": 1.0971596578588725,
+   "brier": 0.6656874054681524,
+   "confusion": [
+    [
+     0,
+     0,
+     1570
+    ],
+    [
+     0,
+     0,
+     1542
+    ],
+    [
+     0,
+     0,
+     1780
+    ]
+   ]
+  },
+  "train_sizes": [
+   4028,
+   4018,
+   4025,
+   4020,
+   4022,
+   4072
+  ],
+  "embargo_bars": 48,
+  "params": {
+   "n_estimators": 300,
+   "learning_rate": 0.05,
+   "max_depth": 4,
+   "min_child_weight": 2.0,
+   "subsample": 0.8,
+   "colsample_bytree": 0.7,
+   "reg_lambda": 5.0,
+   "tree_method": "hist"
+  }
+ }
+}

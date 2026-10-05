@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+crypto/data/
+crypto/micro_data/
+crypto/signals/
+crypto/snapshots/

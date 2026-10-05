@@ -1,0 +1,62 @@
+{
+  "generated_utc": "20260928T144712Z",
+  "args": {
+    "symbols": [
+      "ETHUSDT"
+    ],
+    "interval": "15m",
+    "candles": 5000,
+    "seq_len": 24,
+    "pt": 1.5,
+    "sl": 1.5,
+    "vert": 8,
+    "ambiguous": "drop",
+    "folds": 5,
+    "embargo": 0.01,
+    "hidden": 48,
+    "layers": 1,
+    "dropout": 0.3,
+    "epochs": 25,
+    "batch": 128,
+    "lr": 0.001,
+    "fee": 0.0003,
+    "seed": 7,
+    "micro": false,
+    "control": false,
+    "only": null
+  },
+  "reports": [
+    {
+      "symbol": "ETHUSDT",
+      "interval": "15m",
+      "seq_len": 24,
+      "micro": false,
+      "control": false,
+      "n_samples": 4869,
+      "results": {
+        "BiLSTM": {
+          "verdict": "no_edge",
+          "threshold": 0.6,
+          "trades": 609,
+          "profit_factor": 0.7911004859885024,
+          "total_return": -0.2645252002641342,
+          "sharpe": -0.0975292277302732,
+          "deflated_sharpe": 0.00146939075517738,
+          "random_pf": 0.7345707115540485,
+          "folds": 5
+        },
+        "LSTM": {
+          "verdict": "no_edge",
+          "threshold": 0.55,
+          "trades": 647,
+          "profit_factor": 0.8597491451829893,
+          "total_return": -0.1885568777122227,
+          "sharpe": -0.06321088774760168,
+          "deflated_sharpe": 0.008724190875860849,
+          "random_pf": 0.738725703805169,
+          "folds": 5
+        }
+      }
+    }
+  ]
+}

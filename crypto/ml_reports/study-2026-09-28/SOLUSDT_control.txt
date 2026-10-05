@@ -1,0 +1,44 @@
+POSITIVE CONTROL - injecting a leaked future-label feature
+If the harness is sound this must produce a high DSR.
+
+
+==========================================================================
+SOLUSDT @ 15m
+==========================================================================
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  candles: 5000
+  samples: 4886  labels: {-1: 1620, 0: 1501, 1: 1765}  ambiguous dropped: 11  mean uniqueness: 0.174
+  purged folds used: 6/6  embargo: 48 bars
+
+  threshold sweep (9 trials, all counted toward DSR):
+      thr  trades      PF    win%     avg%    total%   Sharpe
+     0.30     808    4.30   76.5%   0.304%   245.39%    0.615
+     0.35     799    4.21   76.8%   0.299%   238.86%    0.603
+     0.40     792    4.58   78.9%   0.313%   248.14%    0.639
+     0.45     776    4.87   80.3%   0.326%   252.60%    0.669
+     0.50     765    5.83   81.8%   0.348%   265.88%    0.744
+     0.55     757    5.72   82.3%   0.347%   262.83%    0.740
+     0.60     736    6.26   83.2%   0.356%   261.77%    0.785
+     0.65     718    6.86   84.0%   0.367%   263.74%    0.832
+     0.70     682    7.66   84.6%   0.376%   256.58%    0.876
+
+  BEST (thr=0.70) - but this is 'best of 9 trials', so read the DSR:
+    trades           682
+    profit factor    7.655   (random baseline 0.738)
+    total return     +256.58%  (random p95 -11.88%, buy&hold +58.58%)
+    per-trade Sharpe +0.876
+    DEFLATED SHARPE  1.000   <- P(real edge). Below 0.95 = not evidence.
+
+  regime split (doctrine check):
+    hot  (vol>=1.0x, vol expanding):  133 trades  PF 7.54  total +59.89%
+    cold (chop / low volume):         549 trades  PF 7.69  total +196.68%
+
+  top features: LEAKED_future_label(876), vol_expansion(541), atr_pct(445), cvd_slope24(430), realized_vol20(403), ret48_z(396), hour_cos(358), vol_ratio(356), lag_bb_width(342), dist_hh20(320)
+
+  VERDICT: POSSIBLE EDGE NEEDS FORWARD TEST
+
+==========================================================================
+control DSR = 1.000   PF = 7.66
+HARNESS SOUND: it detects a real edge when one exists.
+=> the NO EDGE verdict on real features is a genuine null.

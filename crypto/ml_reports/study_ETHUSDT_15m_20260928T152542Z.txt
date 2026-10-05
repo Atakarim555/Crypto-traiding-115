@@ -1,0 +1,45 @@
+ml_study  ETHUSDT  15m  CRYPTO_ASOF=1790608499999  fee 0.0003/side
+  cache: 12004 candles on disk
+  CRYPTO_ASOF=1790608499999: frozen cache, 12004 bars, no network
+  data 2026-08-07T13:15:00+00:00 .. 2026-09-28T15:14:59.999000+00:00  (5000 candles)
+  features 27  samples 4892  labels -1/0/+1 [1570, 1542, 1780]  ambiguous dropped 5  mean uniqueness 0.175
+
+  LightGBM  out-of-fold n=4892
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3888    0.3861    0.3879    1.1187    0.6816
+    model (train)         0.7682    0.7643    0.7653    0.7261    0.4137
+    majority class        0.3639    0.3333    0.1779   21.9715    1.2723
+    class prior           0.3639    0.3333    0.1779    1.0972    0.6657
+    confusion (rows true -1/0/+1, cols predicted): [[509, 354, 707], [462, 594, 486], [648, 333, 799]]
+
+  BiLSTM: 29859 trainable parameters, 243s
+    mean train loss by epoch: 0.1889 0.1783 0.1718 0.1630 0.1519 0.1389 0.1276 0.1162 0.1080 ... 0.1080
+
+  BiLSTM  out-of-fold n=4869
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3816    0.3796    0.3801    1.6771    0.8869
+    model (train)         0.7640    0.7615    0.7616    0.5867    0.3345
+    majority class        0.3627    0.3333    0.1774   22.0115    1.2746
+    class prior           0.3627    0.3333    0.1774    1.0970    0.6656
+    confusion (rows true -1/0/+1, cols predicted): [[599, 339, 628], [492, 513, 532], [647, 373, 746]]
+
+  LSTM: 14931 trainable parameters, 98s
+    mean train loss by epoch: 0.1895 0.1785 0.1703 0.1602 0.1484 0.1360 0.1241 0.1126 0.1016 ... 0.1016
+
+  LSTM  out-of-fold n=4869
+                             acc   bal_acc   macroF1   logloss     brier
+    model (test)          0.3800    0.3785    0.3780    1.7050    0.8903
+    model (train)         0.7902    0.7874    0.7877    0.5356    0.3028
+    majority class        0.3627    0.3333    0.1774   22.0115    1.2746
+    class prior           0.3627    0.3333    0.1774    1.0970    0.6656
+    confusion (rows true -1/0/+1, cols predicted): [[644, 369, 553], [462, 491, 584], [654, 397, 715]]
+
+  detection power (planted leak -> full PnL harness):
+    leak 0.00  DSR 0.000  PF 0.763  random PF 0.744  trades 746  no_edge
+    leak 0.02  DSR 0.000  PF 0.754  random PF 0.744  trades 779  no_edge
+    leak 0.05  DSR 0.130  PF 0.870  random PF 0.737  trades 79  no_edge
+    leak 0.10  DSR 0.288  PF 1.065  random PF 0.731  trades 85  no_edge
+    leak 0.15  DSR 0.354  PF 1.126  random PF 0.732  trades 117  no_edge
+    leak 0.20  DSR 0.705  PF 1.381  random PF 0.734  trades 175  no_edge
+    leak 0.30  DSR 0.997  PF 1.905  random PF 0.738  trades 298  possible_edge_needs_forward_test
+    leak 0.55  DSR 1.000  PF 7.791  random PF 0.741  trades 682  possible_edge_needs_forward_test
